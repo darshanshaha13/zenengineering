@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-r from-foreground/95 via-foreground/85 to-transparent z-10" />
         <img
-          src="/images/hero-image.jpg"
+          src="/hero-image.jpg"
           alt="Modern engineering workspace"
           className="w-full h-full object-cover"
         />
