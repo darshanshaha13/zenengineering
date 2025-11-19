@@ -32,27 +32,6 @@ const About = () => {
       {/* <Header /> */}
       <main>
         {/* Hero Section */}
-        {/* <section className="relative py-24 bg-gradient-to-br from-foreground to-foreground/90 text-background overflow-hidden">
-          <div className="container-custom">
-            <div className="max-w-3xl animate-slide-up">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-3 block">
-                About Us
-              </span>
-              <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                Engineering Tomorrow&apos;s Solutions Today
-              </h1>
-              <p className="text-xl text-background/90 leading-relaxed">
-                For over 15 years, Zen Engineering Solutions has been at the forefront of acoustic and HVAC engineering, delivering exceptional results across India.
-              </p><br></br>
-              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-semibold mb-8">
-                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
-                Leading HVAC & Acoustic Engineering in India
-              </span>
-
-            </div>
-          </div>
-        </section> */}
-        {/* Hero Section */}
         <section className="relative py-24 bg-gradient-to-br from-foreground via-foreground/95 to-slate-900 text-background overflow-hidden">
           {/* subtle background shapes */}
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
@@ -69,9 +48,11 @@ const About = () => {
               </span>
 
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Engineering Tomorrow&apos;s
+                Engineering Tomorrow&apos;s 
                 <br />
-                Solutions Today
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">
+                  Solutions
+                </span> Today
               </h1>
 
               <p className="text-lg md:text-xl text-background/85 leading-relaxed">
@@ -173,7 +154,7 @@ const About = () => {
 
 
         {/* Company Story */}
-        <section className="section-padding bg-section-bg">
+        <section className="section-padding bg-section-bg ">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-up">
