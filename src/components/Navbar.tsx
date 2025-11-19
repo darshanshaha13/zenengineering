@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
             <div className="h-11 w-11 rounded-full bg-gradient-to-br from-[#0EA5E9] via-[#22D3EE] to-[#F97373] p-[2px]">
                 <div className="h-full w-full rounded-full bg-white flex items-center justify-center">
                 <img
-                    src="/public/zen-logo.png"
+                    src="/zen-logo.png"
                     alt="Zen Engineering logo"
                     className="h-8 w-8 object-contain group-hover:scale-105 transition-transform duration-300"
                 />
