@@ -4,6 +4,49 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Target, Eye, Award } from "lucide-react";
 import TiltedCard from "@/components/ui/TiltedCard/TiltedCard";
 import TiltWrapper from "@/components/ui/TiltWrapper";
+import { useState, useEffect, useRef } from "react";
+
+// --- Helper Component for Animation ---
+const CountUp = ({ end, duration = 2000, suffix = "" }: { end: number, duration?: number, suffix?: string }) => {
+  const [count, setCount] = useState(0);
+  const ref = useRef<HTMLSpanElement>(null);
+  const hasAnimated = useRef(false); // Ensures animation runs only once
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasAnimated.current) {
+          hasAnimated.current = true;
+          let startTimestamp: number | null = null;
+          
+          const step = (timestamp: number) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            
+            // Ease-out function for smooth landing: 1 - (1 - t)^3
+            const easeOut = 1 - Math.pow(1 - progress, 3);
+            
+            setCount(Math.floor(easeOut * end));
+            
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            }
+          };
+          window.requestAnimationFrame(step);
+        }
+      },
+      { threshold: 0.5 } // Trigger when 50% of the element is visible
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => observer.disconnect();
+  }, [end, duration]);
+
+  return <span ref={ref}>{count}{suffix}</span>;
+};
 
 const managingPartners = [
   {
@@ -63,22 +106,39 @@ const About = () => {
 
             {/* stats strip */}
             <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl animate-fade-in">
-              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                <p className="text-2xl md:text-3xl font-bold">15+</p>
+              
+              {/* Stat 1 */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md hover:bg-white/10 transition-colors">
+                <p className="text-2xl md:text-3xl font-bold text-primary">
+                  <CountUp end={15} suffix="+" />
+                </p>
                 <p className="text-xs md:text-sm text-background/70">Years of experience</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                <p className="text-2xl md:text-3xl font-bold">500+</p>
+
+              {/* Stat 2 */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md hover:bg-white/10 transition-colors">
+                <p className="text-2xl md:text-3xl font-bold text-primary">
+                  <CountUp end={500} suffix="+" />
+                </p>
                 <p className="text-xs md:text-sm text-background/70">Projects delivered</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                <p className="text-2xl md:text-3xl font-bold">200+</p>
+
+              {/* Stat 3 */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md hover:bg-white/10 transition-colors">
+                <p className="text-2xl md:text-3xl font-bold text-primary">
+                  <CountUp end={200} suffix="+" />
+                </p>
                 <p className="text-xs md:text-sm text-background/70">Happy clients</p>
               </div>
-              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
-                <p className="text-2xl md:text-3xl font-bold">100%</p>
+
+              {/* Stat 4 */}
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md hover:bg-white/10 transition-colors">
+                <p className="text-2xl md:text-3xl font-bold text-primary">
+                  <CountUp end={100} suffix="%" />
+                </p>
                 <p className="text-xs md:text-sm text-background/70">Commitment to quality</p>
               </div>
+
             </div>
           </div>
         </section>
