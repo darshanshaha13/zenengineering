@@ -32,7 +32,7 @@ const About = () => {
       {/* <Header /> */}
       <main>
         {/* Hero Section */}
-        <section className="relative py-24 bg-gradient-to-br from-foreground to-foreground/90 text-background overflow-hidden">
+        {/* <section className="relative py-24 bg-gradient-to-br from-foreground to-foreground/90 text-background overflow-hidden">
           <div className="container-custom">
             <div className="max-w-3xl animate-slide-up">
               <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-3 block">
@@ -51,7 +51,57 @@ const About = () => {
 
             </div>
           </div>
+        </section> */}
+        {/* Hero Section */}
+        <section className="relative py-24 bg-gradient-to-br from-foreground via-foreground/95 to-slate-900 text-background overflow-hidden">
+          {/* subtle background shapes */}
+          <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+            <div className="absolute -top-32 -left-16 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
+            <div className="absolute -bottom-40 right-0 h-96 w-96 rounded-full bg-sky-400/10 blur-[90px]" />
+          </div>
+
+          <div className="container-custom">
+            <div className="max-w-3xl animate-slide-up">
+              {/* badge */}
+              <span className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/15 text-primary text-xs font-semibold uppercase tracking-[0.18em] mb-4">
+                <span className="h-1.5 w-1.5 rounded-full bg-primary" />
+                About Us
+              </span>
+
+              <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                Engineering Tomorrow&apos;s
+                <br />
+                Solutions Today
+              </h1>
+
+              <p className="text-lg md:text-xl text-background/85 leading-relaxed">
+                For over 15 years, Zen Engineering Solutions has been at the forefront
+                of acoustic and HVAC engineering, delivering exceptional results across India.
+              </p>
+            </div>
+
+            {/* stats strip */}
+            <div className="mt-10 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl animate-fade-in">
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
+                <p className="text-2xl md:text-3xl font-bold">15+</p>
+                <p className="text-xs md:text-sm text-background/70">Years of experience</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
+                <p className="text-2xl md:text-3xl font-bold">500+</p>
+                <p className="text-xs md:text-sm text-background/70">Projects delivered</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
+                <p className="text-2xl md:text-3xl font-bold">200+</p>
+                <p className="text-xs md:text-sm text-background/70">Happy clients</p>
+              </div>
+              <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md">
+                <p className="text-2xl md:text-3xl font-bold">100%</p>
+                <p className="text-xs md:text-sm text-background/70">Commitment to quality</p>
+              </div>
+            </div>
+          </div>
         </section>
+
 
         {/* Mission, Vision, Values */}
         <section className="relative py-20">
@@ -155,6 +205,112 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* Timeline / Milestones */}
+        <section className="section-padding bg-section-bg/60">
+          <div className="container-custom">
+            <div className="text-center max-w-3xl mx-auto mb-12">
+              <span className="text-primary font-semibold text-xs tracking-[0.2em] uppercase">
+                Our Journey
+              </span>
+              <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
+                From a small office to pan-India projects
+              </h2>
+              <p className="text-muted-foreground">
+                Every milestone is a story of a client trusting us with their space — and
+                coming back with the next challenge.
+              </p>
+            </div>
+
+            <div className="relative max-w-4xl mx-auto">
+              {/* vertical line */}
+              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border/70 md:-translate-x-1/2" />
+
+              <div className="space-y-10">
+                {/* 2008 */}
+                <div className="relative flex md:grid md:grid-cols-2 gap-6 items-start">
+                  <div className="hidden md:block" />
+                  <div className="relative md:pl-8">
+                    <div className="absolute -left-[33px] md:-left-10 top-2 h-4 w-4 rounded-full bg-primary border-4 border-background" />
+                    <div className="rounded-2xl bg-card shadow-lg border border-border/70 p-5">
+                      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-1">
+                        2008
+                      </p>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Zen Engineering is founded in Maharashtra
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Started as a focused acoustic consultancy, serving local commercial
+                        and educational projects.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* 2014 */}
+                <div className="relative flex md:grid md:grid-cols-2 gap-6 items-start">
+                  <div className="relative md:pr-8 md:text-right">
+                    <div className="absolute -left-[33px] md:right-[-2.4rem] top-2 h-4 w-4 rounded-full bg-primary border-4 border-background" />
+                    <div className="rounded-2xl bg-card shadow-lg border border-border/70 p-5 inline-block text-left md:text-right">
+                      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-1">
+                        2014
+                      </p>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Full-scale HVAC design services
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Expanded into HVAC engineering with end-to-end design and execution
+                        capabilities for larger facilities.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden md:block" />
+                </div>
+
+                {/* 2018 */}
+                <div className="relative flex md:grid md:grid-cols-2 gap-6 items-start">
+                  <div className="hidden md:block" />
+                  <div className="relative md:pl-8">
+                    <div className="absolute -left-[33px] md:-left-10 top-2 h-4 w-4 rounded-full bg-primary border-4 border-background" />
+                    <div className="rounded-2xl bg-card shadow-lg border border-border/70 p-5">
+                      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-1">
+                        2018
+                      </p>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Pan-India project footprint
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Delivered complex projects across multiple states, building a strong
+                        reputation in education, healthcare and commercial spaces.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Today */}
+                <div className="relative flex md:grid md:grid-cols-2 gap-6 items-start">
+                  <div className="relative md:pr-8 md:text-right">
+                    <div className="absolute -left-[33px] md:right-[-2.4rem] top-2 h-4 w-4 rounded-full bg-primary border-4 border-background" />
+                    <div className="rounded-2xl bg-card shadow-lg border border-border/70 p-5 inline-block text-left md:text-right">
+                      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-1">
+                        Today
+                      </p>
+                      <h3 className="text-lg font-semibold mb-2">
+                        Trusted engineering partner for leading brands
+                      </h3>
+                      <p className="text-sm text-muted-foreground">
+                        Combining experience with modern tools and simulation to deliver
+                        quiet, comfortable and energy-efficient spaces.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="hidden md:block" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
 
         {/* Team Section – Managing Partners */}
         <section className="section-padding">
