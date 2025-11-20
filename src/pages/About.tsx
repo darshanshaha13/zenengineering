@@ -8,6 +8,16 @@ import { useState, useEffect, useRef } from "react";
 import ShinyText from "@/components/ui/ShinyText/ShinyText";
 import { Button } from "@/components/ui/button"; 
 
+// --- Consistent Dark Theme Constants (RE-ADDED) ---
+const DARK_BG = "#050A14"; 
+const SECONDARY_BG = "#0B1120"; 
+const TEXT_MUTED_DARK = "text-slate-400"; 
+const BORDER_DARK = "border-white/10"; 
+const ACCENT_COLOR_CLASS = "text-blue-400"; 
+const GLASS_CARD_BASE = `border ${BORDER_DARK} bg-white/5 backdrop-blur-lg`;
+const GLASS_CARD_HOVER = `shadow-xl shadow-black/30 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300`;
+
+
 // --- Helper Component for Animation ---
 const CountUp = ({ end, duration = 2000, suffix = "" }: { end: number, duration?: number, suffix?: string }) => {
   const [count, setCount] = useState(0);
@@ -75,11 +85,14 @@ const managingPartners = [
 
 const About = () => {
   return (
-    <div className="min-h-screen">
+    // Set the overall container background to the DARK_BG color for uniformity
+    <div className={`min-h-screen bg-[${DARK_BG}]`}>
       {/* <Header /> */}
       <main>
-        {/* Hero Section - Refactored to match Hero.tsx Premium Dark Style */}
-        <section className="relative min-h-[75vh] flex items-center py-24 bg-[#050A14] text-white overflow-hidden">
+        {/* =======================================================================================
+           1. Hero Section 
+           ======================================================================================= */}
+        <section className={`relative min-h-[75vh] flex items-center py-24 bg-[${DARK_BG}] text-white overflow-hidden`}>
           
           {/* --- LAYER 1: Background Image & Texture --- */}
           <div className="absolute inset-0 z-0 pointer-events-none">
@@ -97,6 +110,13 @@ const About = () => {
             {/* Subtle Glow/Spotlight effect behind the text area */}
             <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-blue-500/10 blur-[150px] rounded-full mix-blend-screen" />
           </div>
+
+          {/* --- Fading Gradient Overlay (NEW) --- */}
+          {/* This creates the smooth transition from the background image/texture to the solid DARK_BG of the next section */}
+          <div 
+            className="absolute inset-x-0 bottom-0 h-48 z-10 pointer-events-none" 
+            style={{ background: `linear-gradient(to top, ${DARK_BG} 0%, rgba(5, 10, 20, 0) 100%)` }}
+          />
 
           {/* --- LAYER 2: Content --- */}
           <div className="container-custom relative z-10">
@@ -195,65 +215,67 @@ const About = () => {
         </section>
 
 
-        {/* Mission, Vision, Values */}
-        <section className="relative py-20">
+        {/* =======================================================================================
+           2. Mission, Vision, Values (Now using DARK_BG for seamless flow) 
+           ======================================================================================= */}
+        <section className={`relative py-20 bg-[${DARK_BG}]`}>
           {/* subtle background blobs */}
           <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
-            <div className="absolute -top-24 -left-10 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
-            <div className="absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl" />
+            <div className="absolute -top-24 -left-10 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl opacity-20" />
+            <div className="absolute -bottom-32 right-0 h-80 w-80 rounded-full bg-sky-400/10 blur-3xl opacity-20" />
           </div>
 
           <div className="container-custom">
             <div className="text-center max-w-2xl mx-auto mb-12">
-              <span className="text-primary font-semibold text-xs tracking-[0.2em] uppercase">
+              <span className={`${ACCENT_COLOR_CLASS} font-semibold text-xs tracking-[0.2em] uppercase`}>
                 Why clients choose us
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
+              <h2 className="text-white text-3xl md:text-4xl font-bold mt-3 mb-4">
                 Built on clarity, trust & performance
               </h2>
-              <p className="text-muted-foreground">
+              <p className={TEXT_MUTED_DARK}>
                 Every project starts with a clear purpose, a measurable outcome,
                 and the promise that we&apos;ll treat your space like our own.
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Mission */}
-              <Card className="border border-primary/10 bg-card/80 backdrop-blur-lg shadow-[0_18px_45px_rgba(15,23,42,0.12)] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(15,23,42,0.18)] transition-all duration-300">
+              {/* Mission - Updated Card Styling for Premium Dark Glass */}
+              <Card className={`${GLASS_CARD_BASE} ${GLASS_CARD_HOVER}`}>
                 <CardContent className="p-8 text-center">
-                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                    <Target className="h-7 w-7 text-primary" />
+                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-blue-500/20">
+                    <Target className={`h-7 w-7 ${ACCENT_COLOR_CLASS}`} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Our Mission</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <h3 className="text-white text-xl font-semibold mb-3">Our Mission</h3>
+                  <p className={`text-sm ${TEXT_MUTED_DARK} leading-relaxed`}>
                     To deliver cutting-edge engineering solutions that create
                     comfortable, efficient, and sustainable environments for our clients.
                   </p>
                 </CardContent>
               </Card>
 
-              {/* Vision */}
-              <Card className="border border-primary/10 bg-card/80 backdrop-blur-lg shadow-[0_18px_45px_rgba(15,23,42,0.12)] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(15,23,42,0.18)] transition-all duration-300 delay-75">
+              {/* Vision - Updated Card Styling for Premium Dark Glass */}
+              <Card className={`${GLASS_CARD_BASE} ${GLASS_CARD_HOVER} delay-75`}>
                 <CardContent className="p-8 text-center">
-                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                    <Eye className="h-7 w-7 text-primary" />
+                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-blue-500/20">
+                    <Eye className={`h-7 w-7 ${ACCENT_COLOR_CLASS}`} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Our Vision</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <h3 className="text-white text-xl font-semibold mb-3">Our Vision</h3>
+                  <p className={`text-sm ${TEXT_MUTED_DARK} leading-relaxed`}>
                     To be India&apos;s most trusted engineering partner, setting new
                     standards in acoustic and HVAC excellence.
                   </p>
                 </CardContent>
               </Card>
 
-              {/* Values */}
-              <Card className="border border-primary/10 bg-card/80 backdrop-blur-lg shadow-[0_18px_45px_rgba(15,23,42,0.12)] hover:-translate-y-2 hover:shadow-[0_24px_60px_rgba(15,23,42,0.18)] transition-all duration-300 delay-150">
+              {/* Values - Updated Card Styling for Premium Dark Glass */}
+              <Card className={`${GLASS_CARD_BASE} ${GLASS_CARD_HOVER} delay-150`}>
                 <CardContent className="p-8 text-center">
-                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10">
-                    <Award className="h-7 w-7 text-primary" />
+                  <div className="mx-auto mb-6 flex h-14 w-14 items-center justify-center rounded-full bg-blue-500/20">
+                    <Award className={`h-7 w-7 ${ACCENT_COLOR_CLASS}`} />
                   </div>
-                  <h3 className="text-xl font-semibold mb-3">Our Values</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">
+                  <h3 className="text-white text-xl font-semibold mb-3">Our Values</h3>
+                  <p className={`text-sm ${TEXT_MUTED_DARK} leading-relaxed`}>
                     Excellence, innovation and integrity with an obsession for
                     long-term client satisfaction.
                   </p>
@@ -263,19 +285,23 @@ const About = () => {
           </div>
         </section>
 
+        {/* Separator */}
+        <hr className={`border-white/10`} />
 
-        {/* Company Story */}
-        <section className="section-padding bg-section-bg ">
+        {/* =======================================================================================
+           3. Company Story 
+           ======================================================================================= */}
+        <section className={`section-padding bg-[${SECONDARY_BG}] border-t ${BORDER_DARK}`}>
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-slide-up">
-                <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-3 block">
+                <span className={`${ACCENT_COLOR_CLASS} font-semibold text-sm uppercase tracking-wider mb-3 block`}>
                   Our Story
                 </span>
-                <h2 className="text-4xl font-bold mb-6">
+                <h2 className="text-white text-4xl font-bold mb-6">
                   Building Excellence Since 2008
                 </h2>
-                <div className="space-y-4 text-muted-foreground leading-relaxed">
+                <div className={`space-y-4 ${TEXT_MUTED_DARK} leading-relaxed`}>
                   <p>
                     Founded in 2008, Zen Engineering Solutions began with a simple vision: to provide world-class acoustic and HVAC engineering services that transform spaces and improve lives.
                   </p>
@@ -289,7 +315,7 @@ const About = () => {
               </div>
               <div className="animate-fade-in relative">
                 {/* Decorative border offset */}
-                <div className="absolute top-4 left-4 w-full h-full border-2 border-primary/30 rounded-2xl -z-10"></div>
+                <div className={`absolute top-4 left-4 w-full h-full border-2 ${BORDER_DARK} rounded-2xl -z-10`}></div>
                 
                 <img
                   src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
@@ -301,17 +327,22 @@ const About = () => {
           </div>
         </section>
 
-        {/* Timeline / Milestones */}
-        <section className="section-padding bg-section-bg/60">
+        {/* Separator */}
+        <hr className={`border-white/10`} />
+
+        {/* =======================================================================================
+           4. Timeline / Milestones 
+           ======================================================================================= */}
+        <section className={`section-padding bg-[${DARK_BG}] border-t ${BORDER_DARK}`}>
           <div className="container-custom">
             <div className="text-center max-w-3xl mx-auto mb-12">
-              <span className="text-primary font-semibold text-xs tracking-[0.2em] uppercase">
+              <span className={`${ACCENT_COLOR_CLASS} font-semibold text-xs tracking-[0.2em] uppercase`}>
                 Our Journey
               </span>
-              <h2 className="text-3xl md:text-4xl font-bold mt-3 mb-4">
+              <h2 className="text-white text-3xl md:text-4xl font-bold mt-3 mb-4">
                 From a small office to pan-India projects
               </h2>
-              <p className="text-muted-foreground">
+              <p className={TEXT_MUTED_DARK}>
                 Every milestone is a story of a client trusting us with their space — and
                 coming back with the next challenge.
               </p>
@@ -319,22 +350,22 @@ const About = () => {
 
             <div className="relative max-w-4xl mx-auto">
               {/* vertical line */}
-              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border/70 md:-translate-x-1/2" />
+              <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-white/20 md:-translate-x-1/2" />
 
               <div className="space-y-10">
                 {/* 2008 */}
                 <div className="relative flex md:grid md:grid-cols-2 gap-6 items-start">
                   <div className="hidden md:block" />
                   <div className="relative md:pl-8">
-                    <div className="absolute -left-[33px] md:-left-10 top-2 h-4 w-4 rounded-full bg-primary border-4 border-background" />
-                    <div className="rounded-2xl bg-card shadow-lg border border-border/70 p-5">
-                      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-1">
+                    <div className={`absolute -left-[33px] md:-left-10 top-2 h-4 w-4 rounded-full bg-blue-500 border-4 bg-[${DARK_BG}]`} />
+                    <div className={`rounded-2xl bg-[${SECONDARY_BG}] shadow-lg border ${BORDER_DARK} p-5`}>
+                      <p className={`text-xs font-semibold tracking-[0.2em] uppercase ${ACCENT_COLOR_CLASS} mb-1`}>
                         2008
                       </p>
-                      <h3 className="text-lg font-semibold mb-2">
+                      <h3 className="text-white text-lg font-semibold mb-2">
                         Zen Engineering is founded in Maharashtra
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className={`text-sm ${TEXT_MUTED_DARK}`}>
                         Started as a focused acoustic consultancy, serving local commercial
                         and educational projects.
                       </p>
@@ -345,15 +376,15 @@ const About = () => {
                 {/* 2014 */}
                 <div className="relative flex md:grid md:grid-cols-2 gap-6 items-start">
                   <div className="relative md:pr-8 md:text-right">
-                    <div className="absolute -left-[33px] md:right-[-2.4rem] top-2 h-4 w-4 rounded-full bg-primary border-4 border-background" />
-                    <div className="rounded-2xl bg-card shadow-lg border border-border/70 p-5 inline-block text-left md:text-right">
-                      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-1">
+                    <div className={`absolute -left-[33px] md:right-[-2.4rem] top-2 h-4 w-4 rounded-full bg-blue-500 border-4 bg-[${DARK_BG}]`} />
+                    <div className={`rounded-2xl bg-[${SECONDARY_BG}] shadow-lg border ${BORDER_DARK} p-5 inline-block text-left md:text-right`}>
+                      <p className={`text-xs font-semibold tracking-[0.2em] uppercase ${ACCENT_COLOR_CLASS} mb-1`}>
                         2014
                       </p>
-                      <h3 className="text-lg font-semibold mb-2">
+                      <h3 className="text-white text-lg font-semibold mb-2">
                         Full-scale HVAC design services
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className={`text-sm ${TEXT_MUTED_DARK}`}>
                         Expanded into HVAC engineering with end-to-end design and execution
                         capabilities for larger facilities.
                       </p>
@@ -366,15 +397,15 @@ const About = () => {
                 <div className="relative flex md:grid md:grid-cols-2 gap-6 items-start">
                   <div className="hidden md:block" />
                   <div className="relative md:pl-8">
-                    <div className="absolute -left-[33px] md:-left-10 top-2 h-4 w-4 rounded-full bg-primary border-4 border-background" />
-                    <div className="rounded-2xl bg-card shadow-lg border border-border/70 p-5">
-                      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-1">
+                    <div className={`absolute -left-[33px] md:-left-10 top-2 h-4 w-4 rounded-full bg-blue-500 border-4 bg-[${DARK_BG}]`} />
+                    <div className={`rounded-2xl bg-[${SECONDARY_BG}] shadow-lg border ${BORDER_DARK} p-5`}>
+                      <p className={`text-xs font-semibold tracking-[0.2em] uppercase ${ACCENT_COLOR_CLASS} mb-1`}>
                         2018
                       </p>
-                      <h3 className="text-lg font-semibold mb-2">
+                      <h3 className="text-white text-lg font-semibold mb-2">
                         Pan-India project footprint
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className={`text-sm ${TEXT_MUTED_DARK}`}>
                         Delivered complex projects across multiple states, building a strong
                         reputation in education, healthcare and commercial spaces.
                       </p>
@@ -385,15 +416,15 @@ const About = () => {
                 {/* Today */}
                 <div className="relative flex md:grid md:grid-cols-2 gap-6 items-start">
                   <div className="relative md:pr-8 md:text-right">
-                    <div className="absolute -left-[33px] md:right-[-2.4rem] top-2 h-4 w-4 rounded-full bg-primary border-4 border-background" />
-                    <div className="rounded-2xl bg-card shadow-lg border border-border/70 p-5 inline-block text-left md:text-right">
-                      <p className="text-xs font-semibold tracking-[0.2em] uppercase text-primary mb-1">
+                    <div className={`absolute -left-[33px] md:right-[-2.4rem] top-2 h-4 w-4 rounded-full bg-blue-500 border-4 bg-[${DARK_BG}]`} />
+                    <div className={`rounded-2xl bg-[${SECONDARY_BG}] shadow-lg border ${BORDER_DARK} p-5 inline-block text-left md:text-right`}>
+                      <p className={`text-xs font-semibold tracking-[0.2em] uppercase ${ACCENT_COLOR_CLASS} mb-1`}>
                         Today
                       </p>
-                      <h3 className="text-lg font-semibold mb-2">
+                      <h3 className="text-white text-lg font-semibold mb-2">
                         Trusted engineering partner for leading brands
                       </h3>
-                      <p className="text-sm text-muted-foreground">
+                      <p className={`text-sm ${TEXT_MUTED_DARK}`}>
                         Combining experience with modern tools and simulation to deliver
                         quiet, comfortable and energy-efficient spaces.
                       </p>
@@ -406,18 +437,23 @@ const About = () => {
           </div>
         </section>
 
+        {/* Separator */}
+        <hr className={`border-white/10`} />
 
-        {/* Team Section – Managing Partners */}
-        <section className="section-padding">
+
+        {/* =======================================================================================
+           5. Team Section – Managing Partners 
+           ======================================================================================= */}
+        <section className={`section-padding bg-[${SECONDARY_BG}] border-t ${BORDER_DARK}`}>
           <div className="container-custom">
             <div className="text-center max-w-3xl mx-auto mb-16 animate-fade-in">
-              <span className="text-primary font-semibold text-sm uppercase tracking-wider mb-3 block">
+              <span className={`${ACCENT_COLOR_CLASS} font-semibold text-sm uppercase tracking-wider mb-3 block`}>
                 Our Team
               </span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              <h2 className="text-white text-4xl md:text-5xl font-bold mb-6">
                 Meet Our Managing Partners
               </h2>
-              <p className="text-muted-foreground text-lg">
+              <p className={`text-lg ${TEXT_MUTED_DARK}`}>
                 Our team of experienced professionals is dedicated to delivering exceptional results for every project.
               </p>
             </div>
@@ -431,12 +467,13 @@ const About = () => {
                     rotateAmplitude={10}
                     scaleOnHover={1.03}
                   >
+                    {/* Updated Card Styling for Premium Dark Glass */}
                     <Card
-                      className="border-2 border-primary shadow-2xl overflow-hidden animate-scale-in bg-card"
+                      className={`${GLASS_CARD_BASE} border-2 border-blue-500/30 shadow-2xl shadow-black/40 overflow-hidden animate-scale-in`}
                       style={{ animationDelay: `${index * 0.1}s` }}
                     >
                       <div className="flex items-center gap-6 p-6 md:p-8">
-                        <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-primary/20 shrink-0">
+                        <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-4 border-blue-500/40 shrink-0">
                           <img
                             src={member.image}
                             alt={member.name}
@@ -444,16 +481,16 @@ const About = () => {
                           />
                         </div>
                         <div>
-                          <div className="inline-block px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs font-semibold mb-3">
+                          <div className="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-semibold mb-3">
                             Managing Partner
                           </div>
-                          <h3 className="text-2xl font-bold mb-1">
+                          <h3 className="text-white text-2xl font-bold mb-1">
                             {member.name}
                           </h3>
-                          <p className="text-primary font-semibold mb-3">
+                          <p className={`${ACCENT_COLOR_CLASS} font-semibold mb-3`}>
                             {member.designation}
                           </p>
-                          <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                          <p className={`leading-relaxed text-sm md:text-base ${TEXT_MUTED_DARK}`}>
                             {member.bio}
                           </p>
                         </div>
@@ -471,9 +508,10 @@ const About = () => {
                     rotateAmplitude={10}
                     scaleOnHover={1.03}
                   >
-                    <Card className="border-2 border-primary shadow-2xl overflow-hidden animate-scale-in bg-card max-w-xl w-full">
+                    {/* Updated Card Styling for Premium Dark Glass */}
+                    <Card className={`${GLASS_CARD_BASE} border-2 border-blue-500/30 shadow-2xl shadow-black/40 overflow-hidden animate-scale-in max-w-xl w-full`}>
                       <div className="flex items-center gap-6 p-6 md:p-8">
-                        <div className="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-primary/20 shrink-0">
+                        <div className="w-24 h-24 md:w-28 md:h-28 rounded-full overflow-hidden border-4 border-blue-500/40 shrink-0">
                           <img
                             src={member.image}
                             alt={member.name}
@@ -481,16 +519,16 @@ const About = () => {
                           />
                         </div>
                         <div>
-                          <div className="inline-block px-3 py-1 bg-primary text-primary-foreground rounded-full text-xs font-semibold mb-3">
+                          <div className="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-xs font-semibold mb-3">
                             Managing Partner
                           </div>
-                          <h3 className="text-2xl font-bold mb-1">
+                          <h3 className="text-white text-2xl font-bold mb-1">
                             {member.name}
                           </h3>
-                          <p className="text-primary font-semibold mb-3">
+                          <p className={`${ACCENT_COLOR_CLASS} font-semibold mb-3`}>
                             {member.designation}
                           </p>
-                          <p className="text-muted-foreground leading-relaxed text-sm md:text-base">
+                          <p className={`leading-relaxed text-sm md:text-base ${TEXT_MUTED_DARK}`}>
                             {member.bio}
                           </p>
                         </div>
