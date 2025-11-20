@@ -69,8 +69,9 @@ const services: Service[] = [
 // --- 2. 3D MODEL COLUMN (LEFT) ---
 
 const AcousticPanelModel = () => {
+  // 💡 FIX: Replaced the Acoustic Panel link with an Air Handling Unit (AHU) model, which highlights HVAC Design and Climate Control.
   const SKETCHFAB_URL =
-    "https://sketchfab.com/models/ac166eb474a24506a53762b4b1991b8b/embed?autospin=0.2&autostart=1&dnt=1&preload=1&ui_theme=dark";
+    "https://sketchfab.com/models/9a014892b901438c8fb66cc0fa689264/embed?autospin=0.2&autostart=1&dnt=1&preload=1&ui_theme=dark";
 
   return (
     <div className="w-full h-full">
@@ -94,7 +95,8 @@ const AcousticPanelModel = () => {
         <div className="pointer-events-none absolute -inset-16 bg-radial from-blue-500/15 via-transparent to-transparent opacity-60" />
 
         <iframe
-          title="Acoustic Panel Optimized"
+          // Updated title to reflect the Air Handling Unit model
+          title="Air Handling Unit (AHU) 3D Model"
           frameBorder="0"
           allowFullScreen
           allow="autoplay; fullscreen; xr-spatial-tracking"
@@ -105,9 +107,9 @@ const AcousticPanelModel = () => {
 
       {/* caption under model */}
       <p className="mt-4 text-sm text-slate-400 text-center">
-        Realistic acoustic panel visualization used in{" "}
-        <span className="text-blue-400 font-semibold">Zen Engineering</span>{" "}
-        design studies.
+        3D visualization of an **Air Handling Unit (AHU)**, central to{" "}
+        <span className="text-blue-400 font-semibold">HVAC Design</span> and{" "}
+        <span className="text-blue-400 font-semibold">Climate Control</span> systems.
       </p>
     </div>
   );
