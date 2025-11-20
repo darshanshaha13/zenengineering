@@ -6,6 +6,16 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 
+// --- Consistent Dark Theme Constants (Copied from About.tsx) ---
+const DARK_BG = "#050A14"; 
+const SECONDARY_BG = "#0B1120"; 
+const TEXT_MUTED_DARK = "text-slate-400"; 
+const BORDER_DARK = "border-white/10"; 
+const ACCENT_COLOR_CLASS = "text-blue-400"; 
+const GLASS_CARD_BASE = `border ${BORDER_DARK} bg-white/5 backdrop-blur-lg`;
+const GLASS_CARD_HOVER = `shadow-xl shadow-black/30 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300`;
+
+
 const projects = [
   {
     id: 1,
@@ -110,15 +120,22 @@ const projects = [
 
 const Projects = () => {
   return (
-    <div className="min-h-screen">
+    // Set the overall container background to the DARK_BG color for uniformity
+    <div className={`min-h-screen bg-[${DARK_BG}]`}>
       {/* <Header /> */}
       
       <main>
-        {/* Hero Section - UPDATED TO MATCH Hero.tsx STYLE */}
-        <section className="relative py-24 bg-[#050A14] text-white overflow-hidden">
+        {/* Hero Section - UPDATED TO MATCH About.tsx STYLE */}
+        <section className={`relative min-h-[50vh] flex items-center py-24 bg-[${DARK_BG}] text-white overflow-hidden`}>
           {/* Subtle Glow/Spotlight effect */}
           <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full mix-blend-screen opacity-50" />
           
+          {/* Fading Gradient Overlay (Copied from About.tsx for smooth transition) */}
+          <div 
+            className="absolute inset-x-0 bottom-0 h-32 z-10 pointer-events-none" 
+            style={{ background: `linear-gradient(to top, ${DARK_BG} 0%, rgba(5, 10, 20, 0) 100%)` }}
+          />
+
           <div className="container-custom relative z-10">
             <div className="max-w-3xl animate-slide-up">
               
@@ -131,7 +148,7 @@ const Projects = () => {
                 <span className="tracking-wide text-xs uppercase">Engineering Portfolio</span>
               </div>
               
-              <span className="text-blue-400 font-semibold text-sm uppercase tracking-wider mb-2 block">
+              <span className={`${ACCENT_COLOR_CLASS} font-semibold text-sm uppercase tracking-wider mb-2 block`}>
                 Our Work
               </span>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight text-transparent bg-clip-text bg-gradient-to-br from-white to-white/60">
@@ -145,13 +162,14 @@ const Projects = () => {
         </section>
 
         {/* Projects Grid */}
-        <section className="section-padding">
+        <section className={`py-20 bg-[${DARK_BG}]`}>
           <div className="container-custom">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
                 <Card 
                   key={project.id}
-                  className="overflow-hidden border-none shadow-lg hover-lift group cursor-pointer animate-scale-in"
+                  // Apply Premium Dark Glass Card Styling
+                  className={`${GLASS_CARD_BASE} ${GLASS_CARD_HOVER} overflow-hidden shadow-none cursor-pointer animate-scale-in bg-[${SECONDARY_BG}]`}
                   style={{ animationDelay: `${index * 0.05}s` }}
                 >
                   <div className="relative h-64 overflow-hidden">
@@ -160,14 +178,20 @@ const Projects = () => {
                       alt={project.title}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-foreground/90 via-foreground/50 to-transparent" />
+                    {/* Darker overlay for better text contrast in dark theme */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
                     <div className="absolute bottom-4 left-4 right-4">
-                      <Badge className="bg-primary text-primary-foreground mb-2">
+                      <Badge className="bg-blue-500 text-white hover:bg-blue-600 mb-2">
                         {project.category}
                       </Badge>
                       <div className="flex gap-2 flex-wrap">
                         {project.tags.map((tag) => (
-                          <Badge key={tag} variant="secondary" className="text-xs">
+                          // CORRECTION: Use {tag} inside the Badge component
+                          <Badge 
+                            key={tag} 
+                            variant="secondary" 
+                            className="text-xs bg-white/10 text-white/80 border-white/20 hover:bg-white/20"
+                          >
                             {tag}
                           </Badge>
                         ))}
@@ -175,23 +199,23 @@ const Projects = () => {
                     </div>
                   </div>
                   <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-2 group-hover:text-primary transition-colors">
+                    <h3 className="text-xl font-bold mb-2 group-hover:text-blue-400 transition-colors text-white">
                       {project.title}
                     </h3>
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
+                    <div className={`flex items-center gap-2 text-sm mb-3 ${TEXT_MUTED_DARK}`}>
                       <MapPin className="h-4 w-4" />
                       {project.location}
                     </div>
-                    <div className="flex gap-4 text-sm text-muted-foreground mb-4">
+                    <div className={`flex gap-4 text-sm mb-4 ${TEXT_MUTED_DARK}`}>
                       <span>📏 {project.area}</span>
                       <span>📅 {project.year}</span>
                     </div>
-                    <p className="text-muted-foreground mb-4 leading-relaxed">
+                    <p className={`mb-4 leading-relaxed text-sm ${TEXT_MUTED_DARK}`}>
                       {project.description}
                     </p>
                     <NavLink 
                       to={`/projects/${project.id}`}
-                      className="text-primary font-medium text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
+                      className="text-blue-400 font-medium text-sm flex items-center gap-2 group-hover:gap-3 transition-all"
                     >
                       View Project Details
                       <ArrowRight className="h-4 w-4" />
@@ -203,20 +227,25 @@ const Projects = () => {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-br from-primary to-accent text-primary-foreground">
+        {/* CTA Section - Replaced with a more premium, dark-theme aligned style */}
+        <section className={`py-20 bg-[${SECONDARY_BG}] border-t ${BORDER_DARK}`}>
           <div className="container-custom text-center">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+            <div className="max-w-3xl mx-auto p-10 rounded-2xl border-2 border-blue-500/30 bg-white/5 backdrop-blur-lg shadow-2xl shadow-blue-500/20">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
                 Start Your Project Today
               </h2>
-              <p className="text-xl mb-8 text-primary-foreground/90">
+              <p className="text-xl mb-8 text-slate-300/90">
                 Ready to bring your vision to life? Contact us to discuss your project requirements.
               </p>
-              <Button size="lg" variant="secondary" asChild>
+              {/* Updated Button Style to match premium look in About.tsx Hero */}
+              <Button 
+                  size="lg" 
+                  className="h-14 px-8 text-base bg-blue-500 text-white hover:bg-blue-600 transition-all duration-300 rounded-full shadow-[0_0_20px_rgba(59,130,246,0.5)] font-semibold group"
+                  asChild
+                >
                 <NavLink to="/contact">
                   Get in Touch
-                  <ArrowRight className="ml-2 h-5 w-5" />
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </NavLink>
               </Button>
             </div>
