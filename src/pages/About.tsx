@@ -7,6 +7,8 @@ import TiltWrapper from "@/components/ui/TiltWrapper";
 import { useState, useEffect, useRef } from "react";
 import ShinyText from "@/components/ui/ShinyText/ShinyText";
 import { Button } from "@/components/ui/button"; 
+import { Helmet } from "react-helmet-async";
+
 
 // --- Consistent Dark Theme Constants (RE-ADDED) ---
 const DARK_BG = "#050A14"; 
@@ -87,6 +89,14 @@ const About = () => {
   return (
     // Set the overall container background to the DARK_BG color for uniformity
     <div className={`min-h-screen bg-[${DARK_BG}]`}>
+      <Helmet>
+        <title>About Us | Zen Engineering Solutions</title>
+        <meta
+          name="description"
+          content="Learn about Zen Engineering Solutions, a leading provider of Acoustic and HVAC engineering solutions with 15+ years of experience and 500+ delivered projects across India."
+        />
+      </Helmet>
+
       {/* <Header /> */}
       <main>
         {/* =======================================================================================

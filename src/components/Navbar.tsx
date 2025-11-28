@@ -40,35 +40,46 @@ const Navbar: React.FC = () => {
     >
       <nav className="container mx-auto flex items-center justify-between px-4 md:px-6">
         
-        {/* --- Brand Logo (Modified) --- */}
+        {/* --- Brand Logo (Restored Box & Moderate Size) --- */}
         <Link
           to="/"
           className="flex items-center gap-3 group"
           onClick={() => setIsOpen(false)}
         >
-          <div className="relative h-10 w-10 rounded-xl overflow-hidden flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-transparent border border-blue-500/30 group-hover:border-blue-400/50 transition-colors">
+          {/* Restored the container div.
+             Changed size to h-12 w-12 (48px) - "Medium" size.
+          */}
+          <div className="
+            relative h-12 w-12 
+            rounded-xl overflow-hidden flex items-center justify-center 
+            bg-gradient-to-br from-blue-500/20 to-transparent 
+            border border-blue-500/30 group-hover:border-blue-400/50 
+            transition-colors
+          ">
             <img
               src="/zen-logo.png"
               alt="Zen Engineering"
-              className="h-6 w-6 object-contain relative z-10 drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]"
+              className="
+                h-7 w-7 
+                object-contain relative z-10 
+                drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]
+                transition-transform duration-300 group-hover:scale-110
+              "
             />
           </div>
 
           <div className="flex flex-col">
-            <span className="text-lg font-bold tracking-wider text-white leading-none shadow-black drop-shadow-md">
+            {/* Text size adjusted to standard large/xl to match the 48px icon */}
+            <span className="text-lg md:text-xl font-bold tracking-wider text-white leading-none shadow-black drop-shadow-md">
               ZEN<span className="text-blue-400"> </span>ENGINEERING SOLUTIONS
-              {/* === ADDED REGISTERED TRADEMARK SYMBOL HERE === */}
               <span className="align-super text-[0.6em] ml-0.5">&reg;</span>
-              {/* ============================================== */}
             </span>
-            {/* <span className="text-[10px] uppercase tracking-[0.2em] text-slate-300 font-medium mt-1 drop-shadow-md">
-              Industrial Solutions
-            </span> */}
           </div>
         </Link>
 
         {/* --- Desktop Navigation --- */}
-        <div className="hidden md:flex items-center gap-8">
+        {/* Used lg:flex here to prevent the longer text from hitting the menu items on tablet */}
+        <div className="hidden lg:flex items-center gap-8">
           {/* Nav Links Container */}
           <div className={`
             flex items-center gap-1 rounded-full px-2 py-1 transition-colors duration-300
@@ -111,11 +122,11 @@ const Navbar: React.FC = () => {
 
         {/* --- Mobile Menu Toggle --- */}
         <button
-          className="md:hidden p-2 text-white hover:bg-white/10 rounded-full transition-colors"
+          className="lg:hidden p-2 text-white hover:bg-white/10 rounded-full transition-colors"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </nav>
 

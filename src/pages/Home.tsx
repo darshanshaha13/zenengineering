@@ -1,4 +1,4 @@
-// import Header from "@/components/Header";
+import { Helmet } from "react-helmet-async";
 import Footer from "@/components/Footer";
 import Hero from "@/components/home/Hero";
 import ServicesSection from "@/components/home/ServicesSection";
@@ -9,7 +9,14 @@ import ClientsSection from "@/components/home/ClientsSection";
 const Home = () => {
   return (
     <div className="min-h-screen">
-      {/* <Header /> */}
+      <Helmet>
+        <title>Zen Engineering Solutions | Acoustic & HVAC Experts</title>
+        <meta
+          name="description"
+          content="Zen Engineering Solutions provides premium acoustic, HVAC, soundproofing and engineering solutions for commercial and industrial projects."
+        />
+      </Helmet>
+
       <main>
         <Hero />
         <ServicesSection />
@@ -17,6 +24,7 @@ const Home = () => {
         <WhyChooseUs />
         <ClientsSection />
       </main>
+
       <Footer />
     </div>
   );

@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Wind, Volume2, Shield, Settings, Wrench, Thermometer, ArrowRight, PlayCircle } from "lucide-react";
 import { NavLink } from "react-router-dom"; // Assuming you use react-router-dom NavLink/Link
 import ShinyText from "@/components/ui/ShinyText/ShinyText"; // Assuming this utility is available
+import { Helmet } from "react-helmet-async";
+
 
 const services = [
   {
@@ -147,6 +149,14 @@ const ServicesHero = () => {
 const Services = () => {
   return (
     <div className="min-h-screen">
+      <Helmet>
+        <title>Services | Zen Engineering Solutions</title>
+        <meta
+          name="description"
+          content="Explore professional Acoustic Engineering, HVAC Design, Insulation, and System Maintenance services offered by Zen Engineering Solutions. Precision, quality, and industry-grade performance for commercial and industrial projects."
+        />
+      </Helmet>
+
       {/* <Header /> */}
       <main>
         

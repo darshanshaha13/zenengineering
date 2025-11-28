@@ -6,6 +6,8 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from "lucide-react";
+import { Helmet } from "react-helmet-async";
+
 
 // --- Consistent Dark Theme Constants from About.tsx ---
 const DARK_BG = "#050A14"; 
@@ -21,6 +23,14 @@ const Contact = () => {
   return (
     // Set the overall container background to the DARK_BG color for uniformity
     <div className={`min-h-screen bg-[${DARK_BG}]`}>
+
+      <Helmet>
+        <title>Contact Us | Zen Engineering Solutions</title>
+        <meta
+          name="description"
+          content="Contact Zen Engineering Solutions for Acoustic, HVAC, Insulation, and turnkey engineering services. Offices in Pune, Kolhapur & Sangli. Reach us via phone, WhatsApp, or email."
+        />
+      </Helmet>
       {/* <Header /> */}
       <main>
         {/* =======================================================================================

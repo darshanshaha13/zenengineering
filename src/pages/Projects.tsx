@@ -5,6 +5,8 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { Helmet } from "react-helmet-async";
+
 
 // --- Consistent Dark Theme Constants (Copied from About.tsx) ---
 const DARK_BG = "#050A14"; 
@@ -123,6 +125,14 @@ const Projects = () => {
     // Set the overall container background to the DARK_BG color for uniformity
     <div className={`min-h-screen bg-[${DARK_BG}]`}>
       {/* <Header /> */}
+
+      <Helmet>
+        <title>Projects | Zen Engineering Solutions</title>
+        <meta
+          name="description"
+          content="Explore featured engineering projects by Zen Engineering Solutions, including acoustic treatments, HVAC design, insulation and climate control for commercial, industrial, educational and residential spaces across Maharashtra."
+        />
+      </Helmet>
       
       <main>
         {/* Hero Section - UPDATED TO MATCH About.tsx STYLE */}

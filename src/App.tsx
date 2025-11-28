@@ -17,6 +17,9 @@ import NotFound from "./pages/NotFound";
 import Navbar from "./components/Navbar";
 import ThankYou from "./pages/ThankYou";
 
+// comment
+
+
 const queryClient = new QueryClient();
 
 const App = () => (
