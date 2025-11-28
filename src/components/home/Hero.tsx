@@ -1,19 +1,18 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, PlayCircle, CheckCircle2 } from "lucide-react";
-import ShinyText from '@/components/ui/ShinyText/ShinyText';
+import ShinyText from "@/components/ui/ShinyText/ShinyText";
+import { Link } from "react-router-dom"; // ⬅️ ADD THIS
 
 const Hero = () => {
   return (
     <section className="relative min-h-[60vh] md:min-h-[65vh] flex items-center overflow-hidden bg-[#050A14] py-12 md:py-16">
-      
       {/* --- LAYER 1: Background Image & Texture --- */}
       <div className="absolute inset-0 z-0">
         <img
           src="/hero-image.jpg"
           alt="Modern engineering workspace"
-          className="w-full h-full object-cover opacity-50" 
+          className="w-full h-full object-cover opacity-50"
         />
-        {/* Noise Texture Overlay - Adds a 'film grain' premium feel */}
         <div
           className="absolute inset-0 opacity-[0.03] pointer-events-none mix-blend-overlay"
           style={{
@@ -24,21 +23,15 @@ const Hero = () => {
 
       {/* --- LAYER 2: Cinematic Lighting (Gradients) --- */}
       <div className="absolute inset-0 z-10 pointer-events-none">
-        {/* Left-side deep fade for text readability */}
         <div className="absolute inset-0 bg-gradient-to-r from-[#050A14] via-[#050A14]/80 to-transparent" />
-        
-        {/* Bottom fade to blend with next section */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#050A14] to-transparent" />
-        
-        {/* Subtle Glow/Spotlight effect behind the text area */}
         <div className="absolute top-1/4 left-0 w-[600px] h-[600px] bg-blue-500/10 blur-[120px] rounded-full mix-blend-screen" />
       </div>
 
       {/* --- LAYER 3: Content --- */}
       <div className="container relative z-20 px-4 md:px-6">
         <div className="max-w-4xl">
-          
-          {/* Premium Badge */}
+          {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs md:text-sm font-medium text-white/90 mb-6 md:mb-7 animate-fade-in shadow-[0_0_15px_rgba(0,0,0,0.3)]">
             <span className="flex h-2 w-2 relative">
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
@@ -49,9 +42,8 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Headline with Contrast */}
+          {/* Headline */}
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 md:mb-6 animate-slide-up leading-snug tracking-tight max-w-3xl">
-            
             <span className="flex flex-wrap items-baseline gap-2">
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-white/60">
                 Engineering
@@ -68,9 +60,7 @@ const Hero = () => {
                 Solutions That Last.
               </span>
             </span>
-
           </h1>
-
 
           <p className="text-sm md:text-base lg:text-lg text-slate-300 mb-5 md:mb-7 animate-slide-up max-w-3xl leading-relaxed font-light border-l-2 border-blue-500/50 pl-6">
             Trusted across Maharashtra, Zen Engineering Solutions provides premium HVAC, acoustic, and insulation services backed by proven engineering expertise. With offices in Sangli, Kolhapur, and Pune, we deliver energy-efficient solutions tailored to residential, commercial, industrial, and government needs.
@@ -78,61 +68,60 @@ const Hero = () => {
 
           {/* Action Area */}
           <div className="flex flex-col sm:flex-row gap-4 md:gap-5 animate-slide-up mb-6 md:mb-8">
+            {/* ✅ Use Link + asChild for Button */}
             <Button
               size="lg"
               className="h-12 md:h-13 px-7 md:px-8 text-base bg-white text-black hover:bg-slate-200 transition-all duration-300 rounded-full shadow-[0_0_16px_rgba(255,255,255,0.25)] font-semibold group"
+              asChild
             >
-              <a href="/contact" className="flex items-center">
+              <Link to="/contact" className="flex items-center">
                 Start Your Project
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </a>
+              </Link>
             </Button>
-            
+
             <Button
               size="lg"
               variant="outline"
               className="h-12 md:h-13 px-7 md:px-8 text-base border-white/20 bg-white/5 backdrop-blur-sm text-white hover:bg-white/10 hover:border-white/30 transition-all duration-300 rounded-full"
+              asChild
             >
-              <a href="/projects" className="flex items-center">
+              <Link to="/projects" className="flex items-center">
                 <PlayCircle className="mr-2 h-5 w-5" />
                 View Case Studies
-              </a>
+              </Link>
             </Button>
-          </div>       
+          </div>
 
-          {/* Premium Glass Stats Bar */}
+          {/* Stats bar ... (unchanged) */}
           <div className="grid grid-cols-2 md:grid-cols-3 gap-6 p-5 rounded-2xl bg-white/[0.03] border border-white/10 backdrop-blur-sm max-w-3xl">
+            <div className="flex items-start gap-3">
+              <div className="text-blue-400 text-3xl font-bold">3+</div>
+              <div>
+                <div className="text-sm font-medium text-white">Offices</div>
+                <div className="text-[12px] text-slate-400">Across Maharashtra</div>
+              </div>
+            </div>
 
-          {/* Item 1 */}
-          <div className="flex items-start gap-3">
-            <div className="text-blue-400 text-3xl font-bold">3+</div>
-            <div>
-              <div className="text-sm font-medium text-white">Offices</div>
-              <div className="text-[12px] text-slate-400">Across Maharashtra</div>
+            <div className="flex items-start gap-3">
+              <div className="text-blue-400 text-3xl font-bold">✓</div>
+              <div>
+                <div className="text-sm font-medium text-white">Authorised Partners</div>
+                <div className="text-[12px] text-slate-400">Daikin · Anutone · Symphony</div>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-3 col-span-2 md:col-span-1">
+              <div className="text-blue-400 text-3xl font-bold">★</div>
+              <div>
+                <div className="text-sm font-medium text-white">Reliable Service</div>
+                <div className="text-[12px] text-slate-400">
+                  Materials & installations you can trust
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Item 2 */}
-          <div className="flex items-start gap-3">
-            <div className="text-blue-400 text-3xl font-bold">✓</div>
-            <div>
-              <div className="text-sm font-medium text-white">Authorised Partners</div>
-              <div className="text-[12px] text-slate-400">Daikin · Anutone · Symphony</div>
-            </div>
-          </div>
-
-          {/* Item 3 */}
-          <div className="flex items-start gap-3 col-span-2 md:col-span-1">
-            <div className="text-blue-400 text-3xl font-bold">★</div>
-            <div>
-              <div className="text-sm font-medium text-white">Reliable Service</div>
-              <div className="text-[12px] text-slate-400">Materials & installations you can trust</div>
-            </div>
-          </div>
-
-        </div>
-
-          
         </div>
       </div>
     </section>
