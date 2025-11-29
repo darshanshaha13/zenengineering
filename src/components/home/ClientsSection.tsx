@@ -1,4 +1,5 @@
 // src/components/home/ClientsSection.tsx
+import { motion } from "framer-motion";
 
 const clients = [
   {
@@ -38,6 +39,9 @@ const clients = [
 const ACCENT_COLOR_CLASS = "text-blue-400";
 
 const ClientsSection = () => {
+  // Duplicate list so we can loop seamlessly (0% -> -50%)
+  const repeatedClients = [...clients, ...clients];
+
   return (
     <section className="relative overflow-hidden bg-[#050A14] py-10 md:py-12">
       {/* BACKGROUND: Noise + Glow (matches other sections) */}
@@ -77,36 +81,76 @@ const ClientsSection = () => {
           </p>
         </div>
 
-        {/* Logo Grid – compact, glassy cards */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 items-center">
-          {clients.map((client, index) => (
-            <div
-              key={client.name}
-              className="
-                flex items-center justify-center 
-                p-4 md:p-5 rounded-xl 
-                bg-white/[0.03] border border-white/10 backdrop-blur-sm 
-                shadow-xl shadow-black/30
-                hover:shadow-[0_0_30px_rgba(59,130,246,0.18)]
-                hover:-translate-y-[2px]
-                transition-all duration-400 
-                animate-fade-in
-              "
-              style={{ animationDelay: `${index * 0.06}s` }}
+        {/* 3D-style Infinite Carousel */}
+        {/* 3D-style Infinite Carousel */}
+        <div
+          className="relative mt-10 md:mt-12"  // added more space above
+          style={{ perspective: "1400px" }}    // slightly enhanced 3D depth
+        >
+          {/* Edge gradients */}
+          <div className="pointer-events-none absolute inset-y-0 left-0 w-28 md:w-40 bg-gradient-to-r from-[#050A14] to-transparent z-20" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 w-28 md:w-40 bg-gradient-to-l from-[#050A14] to-transparent z-20" />
+
+          <div className="relative overflow-visible py-6 md:py-8"> 
+            {/* ↑ increased padding so hover does NOT get cut */}
+            <motion.div
+              className="flex gap-10 md:gap-14 items-center"
+              animate={{ x: ["0%", "-50%"] }}
+              transition={{
+                repeat: Infinity,
+                duration: 28,
+                ease: "linear",
+              }}
             >
-              <img
-                src={client.logo}
-                alt={client.name}
-                className="
-                  max-w-full h-10 md:h-12 object-contain 
-                  grayscale opacity-60 
-                  hover:grayscale-0 hover:opacity-100 
-                  transition-all duration-400
-                "
-              />
-            </div>
-          ))}
+              {repeatedClients.map((client, index) => (
+                <motion.div
+                  key={`${client.name}-${index}`}
+                  className="shrink-0"
+                  whileHover={{
+                    scale: 1.06,       // slightly reduced (was 1.08)
+                    rotateY: 6,        // softer 3D turn
+                    translateY: -2,    // reduced lift so it won't clip
+                  }}
+                  transition={{ type: "spring", stiffness: 220, damping: 20 }}
+                  style={{ transformStyle: "preserve-3d" }}
+                >
+                  <div
+                    className="
+                      flex items-center justify-center
+                      px-8 py-5 md:px-10 md:py-6  /* bigger card interior */
+                      rounded-2xl
+                      bg-white/[0.03]
+                      border border-white/10
+                      backdrop-blur-md
+                      shadow-[0_18px_45px_rgba(0,0,0,0.55)]
+                      hover:shadow-[0_25px_60px_rgba(37,99,235,0.35)]
+                      transition-shadow duration-300
+                    "
+                  >
+                    <img
+                      src={client.logo}
+                      alt={client.name}
+                      className="
+                        max-w-[150px] md:max-w-[190px]
+                        h-10 md:h-12
+                        object-contain
+                        grayscale opacity-70
+                        hover:grayscale-0 hover:opacity-100
+                        transition-all duration-300
+                      "
+                      loading="lazy"
+                    />
+                  </div>
+
+                  <p className="mt-4 text-center text-[11px] md:text-xs text-slate-400 tracking-wide uppercase">
+                    {client.name}
+                  </p>
+                </motion.div>
+              ))}
+            </motion.div>
+          </div>
         </div>
+
       </div>
     </section>
   );
