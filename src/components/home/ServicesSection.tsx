@@ -31,10 +31,10 @@ interface Service {
 const services: Service[] = [
   {
     icon: Volume2,
-    title: "Acoustic Insulation & Sound-Proofing",
+    title: "Acoustic Insulation",
     description:
       "High-performance acoustic treatment for offices, studios, conference rooms, and auditoriums (Authorised Anutone Acoustic Dealer).",
-    slug: "acoustic-insulation-sound-proofing",
+    slug: "acoustic-insulation",
     texture: "grid",
   },
   {
@@ -56,10 +56,10 @@ const services: Service[] = [
   },
   {
     icon: Layers,
-    title: "Ceiling & Interior Systems",
+    title: "Ceiling Systems",
     description:
-      "Grid, gypsum, and acoustic ceilings with clean, functional detailing for modern interiors.",
-    slug: "ceiling-interior-systems",
+      "Grid, gypsum, and acoustic ceilings with clean, functional detailing for modern spaces.",
+    slug: "ceiling-systems",
     texture: "smooth",
   },
 ];
@@ -284,7 +284,7 @@ const ServicesSection = () => {
               <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
             <span className="tracking-wide uppercase">
-              HVAC · Acoustic · Insulation
+              HVAC · Acoustic · Thermal · Ceilings
             </span>
           </div>
 
@@ -308,8 +308,8 @@ const ServicesSection = () => {
             className="text-slate-300 text-xs md:text-sm font-light animate-slide-up max-w-2xl mx-auto leading-relaxed"
             style={{ animationDelay: "0.12s" }}
           >
-            Zen Engineering Solutions delivers focused HVAC, acoustic, insulation,
-            and ceiling systems to make your spaces quieter, cooler, and more
+            Zen Engineering Solutions delivers focused HVAC, acoustic, thermal,
+            and ceiling solutions to make your spaces quieter, cooler, and more
             efficient.
           </p>
         </div>

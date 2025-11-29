@@ -2,7 +2,7 @@
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Wind, Volume2, Layers, Thermometer, Building2, ArrowRight, PlayCircle } from "lucide-react";
+import { Wind, Volume2, Layers, Thermometer, ArrowRight, PlayCircle } from "lucide-react";
 import { NavLink } from "react-router-dom"; // Assuming you use react-router-dom NavLink/Link
 import ShinyText from "@/components/ui/ShinyText/ShinyText"; // Assuming this utility is available
 import { Helmet } from "react-helmet-async";
@@ -11,9 +11,9 @@ import { Helmet } from "react-helmet-async";
 const services = [
   {
     icon: Volume2,
-    title: "Acoustic Insulation & Sound-Proofing",
+    title: "Acoustic Insulation",
     description: "High-performance acoustic solutions for superior sound control and clarity across studios, offices, auditoriums, and government projects. Authorised Dealer for Anutone Acoustic.",
-    slug: "acoustic-insulation-sound-proofing",
+    slug: "acoustic-insulation",
     features: [
       "Studios and home theatres",
       "Offices and conference rooms",
@@ -47,26 +47,14 @@ const services = [
   },
   {
     icon: Layers,
-    title: "Ceiling & Interior Systems",
+    title: "Ceiling Systems",
     description: "Functional and aesthetic ceiling solutions including grid, gypsum, acoustic ceilings, and cloud shapes for a refined finish.",
-    slug: "ceiling-interior-systems",
+    slug: "ceiling-systems",
     features: [
       "Grid ceilings",
       "Gypsum ceilings",
       "Acoustic ceilings",
       "Cloud shapes"
-    ]
-  },
-  {
-    icon: Building2,
-    title: "Specialized Acoustic Rooms",
-    description: "Custom designed and executed acoustic spaces for critical listening, performance, and presentations.",
-    slug: "specialized-acoustic-rooms",
-    features: [
-      "Auditoriums and government halls",
-      "Recording, editing, and dubbing rooms",
-      "Boardrooms",
-      "High-end home theatres"
     ]
   },
 ];
@@ -129,7 +117,7 @@ const ServicesHero = () => {
                     </h1>
 
                     <p className="text-base md:text-lg lg:text-xl text-slate-300 mb-8 md:mb-10 animate-slide-up max-w-3xl leading-relaxed font-light border-l-2 border-blue-500/50 pl-6">
-                        Premium HVAC, acoustic, insulation, and interior solutions from Sangli, Kolhapur, and Pune — engineered for comfort, performance, and dependable execution.
+                        Premium HVAC, acoustic, thermal, and ceiling solutions from Sangli, Kolhapur, and Pune - engineered for comfort, performance, and dependable execution.
                     </p>
 
                     {/* Action Area */}
@@ -177,7 +165,7 @@ const Services = () => {
         <title>Services | Zen Engineering Solutions</title>
         <meta
           name="description"
-          content="Explore HVAC, acoustic insulation, thermal insulation, ceiling systems, and specialized acoustic rooms delivered by Zen Engineering Solutions across Maharashtra."
+          content="Explore HVAC, acoustic, thermal, and ceiling solutions delivered by Zen Engineering Solutions across Maharashtra."
         />
       </Helmet>
 
@@ -199,7 +187,7 @@ const Services = () => {
                 Specialized Solutions for Every Environment
               </h2>
               <p className="text-slate-400">
-                We combine technical precision with practical application to solve the toughest acoustic and climate challenges.
+                We combine technical precision with practical application to solve the toughest challenges.
               </p>
             </div>
 
@@ -269,7 +257,7 @@ const Services = () => {
                 Engineered for Every Environment
               </h2>
               <p className="text-slate-400">
-                From residences to mission-critical facilities, we tailor acoustic, HVAC, insulation, and interior systems to the demands of each space.
+                From residences to mission-critical facilities, we tailor acoustic, HVAC, thermal, and ceiling systems to the demands of each space.
               </p>
             </div>
 

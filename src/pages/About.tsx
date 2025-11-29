@@ -1,7 +1,14 @@
 // import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Card, CardContent } from "@/components/ui/card";
-import { Target, Eye, Award, ArrowRight, PlayCircle } from "lucide-react";
+import {
+  Target,
+  Eye,
+  Award,
+  ArrowRight,
+  PlayCircle,
+  Linkedin,
+} from "lucide-react";
 import TiltedCard from "@/components/ui/TiltedCard/TiltedCard";
 import TiltWrapper from "@/components/ui/TiltWrapper";
 import { useState, useEffect, useRef } from "react";
@@ -79,6 +86,7 @@ const managingPartners = [
     designation: "Managing Partner",
     image: "/darshan-shah.png", // use your real image path here
     bio: "Co-founder with expertise in sustainable cooling solutions, driving innovation.",
+    linkedin: "https://www.linkedin.com/in/darshan-shah",
   },
   {
     name: "Priya Sharma",
@@ -86,6 +94,7 @@ const managingPartners = [
     image:
       "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
     bio: "Specializes in ventilation systems and air quality, ensuring peak performance.",
+    linkedin: "https://www.linkedin.com/in/priya-sharma",
   },
   {
     name: "Rajesh Singh",
@@ -93,6 +102,7 @@ const managingPartners = [
     image:
       "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
     bio: "Leads project management and client relations, with 20+ years of experience.",
+    linkedin: "https://www.linkedin.com/in/rajesh-singh",
   },
 ];
 
@@ -104,7 +114,7 @@ const About = () => {
         <title>About Us | Zen Engineering Solutions</title>
         <meta
           name="description"
-          content="Zen Engineering Solutions delivers premium HVAC, acoustic, thermal insulation, and ceiling systems across Maharashtra with HQ in Sangli and branches in Kolhapur & Pune."
+          content="Zen Engineering Solutions delivers premium HVAC, acoustic, thermal, and ceiling solutions across Maharashtra with HQ in Sangli and branches in Kolhapur & Pune."
         />
       </Helmet>
 
@@ -177,11 +187,11 @@ const About = () => {
 
               <p className="text-sm md:text-base lg:text-lg text-slate-300 mb-7 md:mb-8 animate-slide-up max-w-3xl leading-relaxed font-light border-l-2 border-blue-500/50 pl-5">
                 Zen Engineering Solutions is a professional engineering services
-                partner for air conditioning, acoustics, thermal insulation, and
-                ceiling systems. With HQ in Sangli and branches in Kolhapur and
-                Pune, we deliver transparent, technically accurate, and
-                long-lasting solutions for residential, commercial, industrial,
-                institutional, and government projects.
+                partner for HVAC, acoustic, thermal, and ceiling solutions. With
+                HQ in Sangli and branches in Kolhapur and Pune, we deliver
+                transparent, technically accurate, and long-lasting solutions
+                for residential, commercial, industrial, institutional, and
+                government projects.
               </p>
 
               {/* Action Area – slightly tighter spacing */}
@@ -213,7 +223,7 @@ const About = () => {
                 {/* Stat 1: Years of experience */}
                 <div className="space-y-1">
                   <div className="text-xl md:text-2xl font-bold text-white tracking-tighter">
-                    <CountUp end={15} suffix="+" />
+                    <CountUp end={5} suffix="+" />
                   </div>
                   <div className="text-[0.65rem] md:text-xs uppercase tracking-[0.22em] text-slate-400 font-medium">
                     Years Legacy
@@ -223,20 +233,20 @@ const About = () => {
                 {/* Stat 2: Projects delivered */}
                 <div className="space-y-1 relative md:before:content-[''] md:before:absolute md:before:-left-3 md:before:top-2 md:before:bottom-2 md:before:w-[1px] md:before:bg-white/10">
                   <div className="text-xl md:text-2xl font-bold text-white tracking-tighter">
-                    <CountUp end={500} suffix="+" />
+                    <CountUp end={400} suffix="+" />
                   </div>
                   <div className="text-[0.65rem] md:text-xs uppercase tracking-[0.22em] text-slate-400 font-medium">
-                    Projects Delivered
+                    Projects
                   </div>
                 </div>
 
                 {/* Stat 3: Happy clients */}
                 <div className="space-y-1 relative md:before:content-[''] md:before:absolute md:before:-left-3 md:before:top-2 md:before:bottom-2 md:before:w-[1px] md:before:bg-white/10">
                   <div className="text-xl md:text-2xl font-bold text-white tracking-tighter">
-                    <CountUp end={200} suffix="+" />
+                    <CountUp end={150} suffix="+" />
                   </div>
                   <div className="text-[0.65rem] md:text-xs uppercase tracking-[0.22em] text-slate-400 font-medium">
-                    Happy Clients
+                    Clients
                   </div>
                 </div>
 
@@ -293,9 +303,9 @@ const About = () => {
                   <p
                     className={`text-sm ${TEXT_MUTED_DARK} leading-relaxed`}
                   >
-                    To deliver reliable, efficient, and high-performance HVAC,
-                    acoustic, and insulation solutions while maintaining
-                    transparency, quality, and customer-focused service.
+                    To deliver reliable, efficient HVAC, acoustic, thermal, and
+                    ceiling solutions while maintaining transparency, quality,
+                    and customer-focused service.
                   </p>
                 </CardContent>
               </Card>
@@ -369,9 +379,9 @@ const About = () => {
                   className={`${TEXT_MUTED_DARK} leading-relaxed space-y-3 text-sm md:text-[15px]`}
                 >
                   <p>
-                    Zen Engineering Solutions specializes in HVAC, acoustic
-                    insulation, thermal insulation, and ceiling systems designed
-                    for comfort, performance, and energy efficiency.
+                    Zen Engineering Solutions specializes in HVAC, acoustic,
+                    thermal, and ceiling solutions designed for comfort,
+                    performance, and energy efficiency.
                   </p>
                   <p>
                     Our team handles residential, commercial, industrial,
@@ -394,8 +404,8 @@ const About = () => {
                 ></div>
 
                 <img
-                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80"
-                  alt="Team collaboration"
+                  src="/services.jpg"
+                  alt="Zen Engineering project execution"
                   className="rounded-2xl shadow-2xl relative grayscale-[20%] hover:grayscale-0 transition-all duration-500"
                 />
               </div>
@@ -598,7 +608,7 @@ const About = () => {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <div>
+                        <div className="flex-1">
                           <div className="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-[0.65rem] font-semibold mb-2.5">
                             Managing Partner
                           </div>
@@ -615,6 +625,21 @@ const About = () => {
                           >
                             {member.bio}
                           </p>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="mt-3 h-9 px-3 border-blue-400/50 text-blue-100 hover:bg-blue-500/10 hover:border-blue-400/70"
+                          >
+                            <a
+                              href={member.linkedin}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="flex items-center"
+                            >
+                              <Linkedin className="mr-2 h-4 w-4" />
+                              Connect
+                            </a>
+                          </Button>
                         </div>
                       </div>
                     </Card>
@@ -641,7 +666,7 @@ const About = () => {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        <div>
+                        <div className="flex-1">
                           <div className="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-[0.65rem] font-semibold mb-2.5">
                             Managing Partner
                           </div>
@@ -658,6 +683,21 @@ const About = () => {
                           >
                             {member.bio}
                           </p>
+                          <Button
+                            size="sm"
+                            variant="outline"
+                            className="mt-3 h-9 px-3 border-blue-400/50 text-blue-100 hover:bg-blue-500/10 hover:border-blue-400/70"
+                          >
+                            <a
+                              href={member.linkedin}
+                              target="_blank"
+                              rel="noreferrer"
+                              className="flex items-center"
+                            >
+                              <Linkedin className="mr-2 h-4 w-4" />
+                              Connect
+                            </a>
+                          </Button>
                         </div>
                       </div>
                     </Card>

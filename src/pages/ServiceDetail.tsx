@@ -30,8 +30,8 @@ const serviceDetails: Record<string, any> = {
       "Certified installation and commissioning",
     ],
   },
-  "acoustic-insulation-sound-proofing": {
-    title: "Acoustic Insulation & Sound-Proofing",
+  "acoustic-insulation": {
+    title: "Acoustic Insulation",
     description:
       "High-performance acoustic solutions for superior sound control and clarity in every environment.",
     image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&q=80",
@@ -75,8 +75,8 @@ const serviceDetails: Record<string, any> = {
       "Improved safety and compliance",
     ],
   },
-  "ceiling-interior-systems": {
-    title: "Ceiling & Interior Systems",
+  "ceiling-systems": {
+    title: "Ceiling Systems",
     description:
       "Functional and aesthetic ceiling solutions including grid, gypsum, acoustic ceilings, and cloud shapes.",
     image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1200&q=80",
@@ -94,27 +94,6 @@ const serviceDetails: Record<string, any> = {
       "Improved acoustic comfort",
       "Neat service integration and access",
       "Quality finishes with long-term durability",
-    ],
-  },
-  "specialized-acoustic-rooms": {
-    title: "Specialized Acoustic Rooms",
-    description:
-      "Custom designed and executed acoustic spaces for critical listening, performance, and presentations.",
-    image: "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?w=1200&q=80",
-    overview:
-      "From concept to commissioning, we build bespoke rooms that meet stringent acoustic targets. Detailing covers structure-borne isolation, surface treatments, and HVAC noise control to achieve predictable results.",
-    features: [
-      "Auditoriums and government halls",
-      "Recording studios and control rooms",
-      "Editing and dubbing rooms",
-      "Boardrooms and presentation suites",
-      "High-end home theatres",
-    ],
-    benefits: [
-      "Precisely controlled acoustic environments",
-      "Turnkey delivery with tested performance",
-      "Comfortable HVAC with low noise intrusion",
-      "Single-point accountability from design to install",
     ],
   },
 };
