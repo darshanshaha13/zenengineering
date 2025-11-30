@@ -7,6 +7,13 @@ import { Card, CardContent } from "@/components/ui/card";
 import { NavLink } from "@/components/NavLink";
 import { ArrowLeft, MapPin, Calendar, Ruler } from "lucide-react";
 
+const DARK_BG = "#050A14";
+const SECONDARY_BG = "#0B1120";
+const BORDER_DARK = "border-white/10";
+const GLASS_CARD = `border ${BORDER_DARK} bg-white/5 backdrop-blur-lg shadow-xl shadow-black/30`;
+const TEXT_MUTED = "text-slate-300";
+const ACCENT = "text-blue-400";
+
 const projectData: Record<string, any> = {
   "1": {
     title: "Premium Office Complex - Acoustic Treatment",
@@ -85,10 +92,10 @@ const projectData: Record<string, any> = {
       "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80"
     ],
     description: "Industrial-grade climate control and acoustic solutions for a production environment with strict temperature and humidity requirements.",
-    challenge: "Manufacturing processes required precise temperature control (±2°F) and humidity management (50±5% RH) to ensure product quality. Additionally, noise from machinery needed to be controlled to meet OSHA standards.",
+    challenge: "Manufacturing processes required precise temperature control (+/- 2 F) and humidity management (50 +/- 5% RH) to ensure product quality. Additionally, noise from machinery needed to be controlled to meet OSHA standards.",
     solution: "We installed a high-precision HVAC system with redundant components, continuous monitoring, and automatic failover capabilities. Acoustic barriers and vibration isolation were implemented around high-noise equipment.",
     results: [
-      "±1°F temperature control achieved",
+      "+/- 1 F temperature control achieved",
       "35% reduction in production defects related to environmental conditions",
       "Noise levels reduced by 15 dB throughout facility",
       "Zero unplanned downtime in first year of operation"
@@ -109,12 +116,12 @@ const ProjectDetail = () => {
 
   if (!project) {
     return (
-      <div className="min-h-screen">
+      <div className={`min-h-screen bg-[${DARK_BG}] text-white`}>
         {/* <Header /> */}
         <main className="section-padding">
           <div className="container-custom text-center">
             <h1 className="text-4xl font-bold mb-4">Project Not Found</h1>
-            <Button asChild>
+            <Button asChild className="bg-blue-600 hover:bg-blue-500 text-white border border-blue-500/50">
               <NavLink to="/projects">
                 <ArrowLeft className="mr-2 h-5 w-5" />
                 Back to Projects
@@ -128,44 +135,50 @@ const ProjectDetail = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className={`min-h-screen bg-[${DARK_BG}] text-white`}>
       {/* <Header /> */}
       
       <main>
         {/* Hero Section */}
-        <section className="relative h-[60vh] flex items-end overflow-hidden">
+        <section className="relative min-h-[60vh] flex items-end overflow-hidden bg-[#050A14] text-white">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-gradient-to-t from-foreground via-foreground/50 to-transparent z-10" />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#050A14] via-black/40 to-transparent z-10" />
+            <div className="absolute top-1/3 left-1/4 w-[520px] h-[520px] bg-blue-500/10 blur-[140px] rounded-full mix-blend-screen" />
             <img
               src={project.heroImage}
               alt={project.title}
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="container-custom relative z-20 pb-16 text-background">
-            <Button variant="outline" size="sm" asChild className="mb-6 bg-background/10 backdrop-blur-sm border-background/20 text-background hover:bg-background/20">
+          <div className="container-custom relative z-20 pb-16 text-white">
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="mb-6 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/15 hover:border-white/40"
+            >
               <NavLink to="/projects">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Projects
               </NavLink>
             </Button>
-            <Badge className="bg-primary text-primary-foreground mb-4">
+            <Badge className="bg-blue-500 text-white mb-4">
               {project.category}
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold mb-4 animate-slide-up">
               {project.title}
             </h1>
-            <div className="flex flex-wrap gap-6 text-background/90 animate-fade-in">
+            <div className="flex flex-wrap gap-6 text-white/80 animate-fade-in">
               <div className="flex items-center gap-2">
-                <MapPin className="h-5 w-5" />
+                <MapPin className="h-5 w-5 text-blue-400" />
                 {project.location}
               </div>
               <div className="flex items-center gap-2">
-                <Calendar className="h-5 w-5" />
+                <Calendar className="h-5 w-5 text-blue-400" />
                 {project.year}
               </div>
               <div className="flex items-center gap-2">
-                <Ruler className="h-5 w-5" />
+                <Ruler className="h-5 w-5 text-blue-400" />
                 {project.area}
               </div>
             </div>
@@ -173,26 +186,26 @@ const ProjectDetail = () => {
         </section>
 
         {/* Project Info */}
-        <section className="section-padding">
+        <section className={`section-padding bg-[${DARK_BG}] text-white border-t ${BORDER_DARK}`}>
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
               <div className="lg:col-span-2">
                 <h2 className="text-3xl font-bold mb-6">Project Overview</h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                <p className={`text-lg ${TEXT_MUTED} leading-relaxed mb-8`}>
                   {project.description}
                 </p>
 
                 <div className="space-y-8">
                   <div>
                     <h3 className="text-2xl font-bold mb-4">The Challenge</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className={`${TEXT_MUTED} leading-relaxed`}>
                       {project.challenge}
                     </p>
                   </div>
 
                   <div>
                     <h3 className="text-2xl font-bold mb-4">Our Solution</h3>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className={`${TEXT_MUTED} leading-relaxed`}>
                       {project.solution}
                     </p>
                   </div>
@@ -202,8 +215,10 @@ const ProjectDetail = () => {
                     <ul className="space-y-3">
                       {project.results.map((result: string, index: number) => (
                         <li key={index} className="flex items-start gap-3">
-                          <span className="text-primary mt-1 text-xl">✓</span>
-                          <span className="text-muted-foreground">{result}</span>
+                          <span className="mt-1">
+                            <Check className="h-5 w-5 text-blue-400" />
+                          </span>
+                          <span className={TEXT_MUTED}>{result}</span>
                         </li>
                       ))}
                     </ul>
@@ -212,35 +227,35 @@ const ProjectDetail = () => {
               </div>
 
               <div>
-                <Card className="border-none shadow-lg sticky top-24">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold mb-4">Project Details</h3>
+                <Card className={`${GLASS_CARD} sticky top-24`}>
+                  <CardContent className="p-6 space-y-4">
+                    <h3 className="text-xl font-bold mb-2">Project Details</h3>
                     <div className="space-y-4 text-sm">
                       <div>
-                        <div className="text-muted-foreground mb-1">Client</div>
-                        <div className="font-semibold">{project.client}</div>
+                        <div className={`${TEXT_MUTED} mb-1`}>Client</div>
+                        <div className="font-semibold text-white">{project.client}</div>
                       </div>
                       <div>
-                        <div className="text-muted-foreground mb-1">Location</div>
-                        <div className="font-semibold">{project.location}</div>
+                        <div className={`${TEXT_MUTED} mb-1`}>Location</div>
+                        <div className="font-semibold text-white">{project.location}</div>
                       </div>
                       <div>
-                        <div className="text-muted-foreground mb-1">Year Completed</div>
-                        <div className="font-semibold">{project.year}</div>
+                        <div className={`${TEXT_MUTED} mb-1`}>Year Completed</div>
+                        <div className="font-semibold text-white">{project.year}</div>
                       </div>
                       <div>
-                        <div className="text-muted-foreground mb-1">Project Area</div>
-                        <div className="font-semibold">{project.area}</div>
+                        <div className={`${TEXT_MUTED} mb-1`}>Project Area</div>
+                        <div className="font-semibold text-white">{project.area}</div>
                       </div>
                       <div>
-                        <div className="text-muted-foreground mb-1">Duration</div>
-                        <div className="font-semibold">{project.duration}</div>
+                        <div className={`${TEXT_MUTED} mb-1`}>Duration</div>
+                        <div className="font-semibold text-white">{project.duration}</div>
                       </div>
                       <div>
-                        <div className="text-muted-foreground mb-2">Tags</div>
+                        <div className={`${TEXT_MUTED} mb-2`}>Tags</div>
                         <div className="flex flex-wrap gap-2">
                           {project.tags.map((tag: string) => (
-                            <Badge key={tag} variant="secondary" className="text-xs">
+                            <Badge key={tag} className="text-xs bg-white/10 text-white border border-white/20">
                               {tag}
                             </Badge>
                           ))}
@@ -257,10 +272,10 @@ const ProjectDetail = () => {
               <h2 className="text-3xl font-bold mb-8">Technical Specifications</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {project.specifications.map((spec: any, index: number) => (
-                  <Card key={index} className="border-none shadow-md">
+                  <Card key={index} className={GLASS_CARD}>
                     <CardContent className="p-6">
-                      <div className="text-sm text-muted-foreground mb-2">{spec.label}</div>
-                      <div className="font-semibold text-lg">{spec.value}</div>
+                      <div className={`text-sm ${TEXT_MUTED} mb-2`}>{spec.label}</div>
+                      <div className="font-semibold text-lg text-white">{spec.value}</div>
                     </CardContent>
                   </Card>
                 ))}
@@ -274,7 +289,7 @@ const ProjectDetail = () => {
                 {project.images.map((image: string, index: number) => (
                   <div 
                     key={index}
-                    className="aspect-video rounded-xl overflow-hidden shadow-lg hover-lift animate-scale-in"
+                    className="aspect-video rounded-xl overflow-hidden shadow-xl shadow-black/30 hover:-translate-y-1 transition-transform duration-300 animate-scale-in"
                     style={{ animationDelay: `${index * 0.1}s` }}
                   >
                     <img 
@@ -290,16 +305,20 @@ const ProjectDetail = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding bg-gradient-to-br from-primary to-accent text-primary-foreground">
+        <section className={`section-padding bg-[${SECONDARY_BG}] text-white border-t ${BORDER_DARK}`}>
           <div className="container-custom text-center">
-            <div className="max-w-3xl mx-auto">
+            <div className="max-w-3xl mx-auto p-10 rounded-2xl border-2 border-blue-500/30 bg-white/5 backdrop-blur-lg shadow-2xl shadow-blue-500/20">
               <h2 className="text-4xl md:text-5xl font-bold mb-6">
                 Have a Similar Project?
               </h2>
-              <p className="text-xl mb-8 text-primary-foreground/90">
+              <p className="text-xl mb-8 text-slate-200">
                 Let's discuss how we can deliver exceptional results for your engineering needs.
               </p>
-              <Button size="lg" variant="secondary" asChild>
+              <Button
+                size="lg"
+                className="h-14 px-8 bg-blue-600 hover:bg-blue-500 text-white border border-blue-500/50 rounded-full"
+                asChild
+              >
                 <NavLink to="/contact">
                   Start Your Project
                 </NavLink>

@@ -70,6 +70,27 @@ const serviceDetails: Record<string, any> = {
       "Condensation and corrosion control for safer, compliant systems",
     ],
   },
+  "air-cooler-systems": {
+    title: "Air Cooler Systems",
+    description:
+      "Authorized Symphony Large-Space Venti-Cooling systems that combine air-cooling with ventilation for big commercial and industrial areas.",
+    image: "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=1200&q=80",
+    overview:
+      "We are authorized dealers for Symphony, providing Venti-Cooling systems that draw in fresh air, cool it via evaporative pads, and deliver continuous airflow — ideal for factories, warehouses, workshops, showrooms, banquet halls, gyms, schools, hospitals, and other large spaces.",
+    features: [
+      "Effective for large open or semi-open spaces across industrial and commercial sites",
+      "Air-cooling plus ventilation to keep air fresh and reduce stale pockets",
+      "Cost-effective and energy-efficient versus conventional HVAC",
+      "Quick, modular installation without heavy ductwork",
+      "Improved air quality and comfort with continuous fresh airflow",
+    ],
+    benefits: [
+      "Genuine Symphony products with reliable performance",
+      "Lower energy costs while cooling hundreds or thousands of sq. ft.",
+      "Flexible deployment across diverse large-format environments",
+      "One-stop guidance to select, install, and support the right system",
+    ],
+  },
   "ceiling-systems": {
     title: "Ceilings",
     description:

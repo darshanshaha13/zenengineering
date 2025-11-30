@@ -34,6 +34,18 @@ const services = [
     ]
   },
   {
+    icon: Wind,
+    title: "Air Cooler Systems",
+    description: "Authorized Symphony Venti-Cooling solutions for large commercial and industrial spaces needing efficient air cooling plus ventilation.",
+    slug: "air-cooler-systems",
+    features: [
+      "Cools and ventilates large open/semi-open areas",
+      "Energy-efficient evaporative cooling",
+      "Quick, modular installation",
+      "Authorized Symphony dealer support"
+    ]
+  },
+  {
     icon: Thermometer,
     title: "Thermal Insulation",
     description: "Energy-efficient insulation for ducts, pipes, roofs, and envelopes using Rockwool, Glasswool, Nitrile Rubber, XLPE, and XPS.",
