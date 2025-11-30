@@ -3,39 +3,37 @@ import { ArrowRight, PlayCircle, CheckCircle2 } from "lucide-react";
 import ShinyText from "@/components/ui/ShinyText/ShinyText";
 import { Link } from "react-router-dom";
 
-// ⬇️ PartnerLogos Component (Enhanced for Readability)
+// ⬇️ PartnerLogos Component
 const PartnerLogos = () => {
   const partners = [
     {
       name: "Daikin",
-      logoSrc: "/daikin-logo.png"
+      logoSrc: "/daikin-logo.png",
     },
     {
       name: "Anutone",
-      logoSrc: "/anutone-logo.jpeg"
+      logoSrc: "/anutone-logo.jpeg",
     },
     {
       name: "Symphony",
-      logoSrc: "/symphony-logo.png"
+      logoSrc: "/symphony-logo.png",
     },
   ];
 
   return (
     <div className="flex flex-col">
-      <div className="text-sm font-medium text-white mb-2">
+      <div className="text-sm font-medium text-white mb-1">
         Authorised Partners
       </div>
-      <div className="flex items-center space-x-5">
+      <div className="flex items-center space-x-4">
         {partners.map((partner) => (
           <div
             key={partner.name}
-            // INCREASED SIZE (h-7) and FULL OPACITY (opacity-100) for readability
             className="h-7 opacity-100 hover:scale-105 transition-all duration-300"
           >
             <img
               src={partner.logoSrc}
               alt={`${partner.name} logo`}
-              // ADDED SUBTLE DROP SHADOW to make the logos pop out
               className="h-full w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
             />
           </div>
@@ -44,7 +42,7 @@ const PartnerLogos = () => {
     </div>
   );
 };
-// ⬆️ END OF PartnerLogos Component
+// ⬆️ PartnerLogos Component
 
 const Hero = () => {
   return (
@@ -75,10 +73,10 @@ const Hero = () => {
       <div className="container relative z-20 px-4 md:px-6">
         <div className="max-w-4xl">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs md:text-sm font-medium text-white/90 mb-6 md:mb-7 animate-fade-in shadow-[0_0_15px_rgba(0,0,0,0.3)]">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 backdrop-blur-md text-xs md:text-sm font-medium text-white/90 mb-6 md:mb-7 shadow-[0_0_15px_rgba(0,0,0,0.3)]">
             <span className="flex h-2 w-2 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
             </span>
             <span className="tracking-wide text-xs uppercase">
               Engineering Comfort. Delivering Excellence.
@@ -86,7 +84,7 @@ const Hero = () => {
           </div>
 
           {/* Headline */}
-          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 md:mb-6 animate-slide-up leading-snug tracking-tight max-w-3xl">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-5 md:mb-6 leading-snug tracking-tight max-w-3xl">
             <span className="flex flex-wrap items-baseline gap-2">
               <span className="text-transparent bg-clip-text bg-gradient-to-br from-white to-white/60">
                 Engineering
@@ -105,13 +103,17 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-sm md:text-base lg:text-lg text-slate-300 mb-5 md:mb-7 animate-slide-up max-w-3xl leading-relaxed font-light border-l-2 border-blue-500/50 pl-6">
-            Trusted across Maharashtra, Zen Engineering Solutions provides premium HVAC, acoustic, and insulation services backed by proven engineering expertise. With offices in Sangli, Kolhapur, and Pune, we deliver energy-efficient solutions tailored to residential, commercial, industrial, and government needs.
+          {/* Description */}
+          <p className="text-sm md:text-base lg:text-lg text-slate-300 mb-5 md:mb-7 max-w-3xl leading-relaxed font-light border-l-2 border-blue-500/50 pl-6">
+            Trusted across Maharashtra, Zen Engineering Solutions provides
+            premium HVAC, acoustic, and insulation services backed by proven
+            engineering expertise. With offices in Sangli, Kolhapur, and Pune,
+            we deliver energy-efficient solutions tailored to residential,
+            commercial, industrial, and government needs.
           </p>
 
-          {/* Action Area */}
-          <div className="flex flex-col sm:flex-row gap-4 md:gap-5 animate-slide-up mb-6 md:mb-8">
-            {/* ✅ Use Link + asChild for Button */}
+          {/* CTA Buttons */}
+          <div className="flex flex-col sm:flex-row gap-4 md:gap-5 mb-6 md:mb-8">
             <Button
               size="lg"
               className="h-12 md:h-13 px-7 md:px-8 text-base bg-white text-black hover:bg-slate-200 transition-all duration-300 rounded-full shadow-[0_0_16px_rgba(255,255,255,0.25)] font-semibold group"
@@ -136,12 +138,16 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Stats bar (THE "GLASS CARD" - STYLES ENHANCED HERE) */}
-          <div
-            className="grid grid-cols-2 md:grid-cols-3 gap-6 p-6 rounded-2xl bg-white/[0.05] border border-white/15 backdrop-blur-lg max-w-4xl shadow-2xl shadow-blue-500/10 transition-all duration-500"
-          >
-            {/* Stat 1: Offices */}
-            <div className="flex items-start gap-3">
+          {/* Stats bar – UPDATED LAYOUT */}
+                  <div
+          className="max-w-4xl rounded-xl bg-[#050A14]/80 p-6 
+                    ring-1 ring-inset ring-blue-500/20 
+                    shadow-[0_0_30px_rgba(59,130,246,0.15)]"
+        >
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+
+            {/* Offices */}
+            <div className="flex items-start gap-3 min-w-[180px]">
               <div className="text-blue-400 text-3xl font-bold">3</div>
               <div>
                 <div className="text-sm font-medium text-white">Offices</div>
@@ -149,13 +155,22 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Stat 2: Authorised Partners (Using new Logo component) */}
-            <div className="flex items-start col-span-2 md:col-span-1">
-              <PartnerLogos />
+            {/* Partners */}
+            <div className="flex items-start gap-3 min-w-[180px] justify-center">
+              <div>
+                <div className="text-sm font-medium text-white mb-1">
+                  Authorised Partners
+                </div>
+                <div className="flex items-center gap-4">
+                  <img src="/daikin-logo.png" className="h-7 w-auto" />
+                  <img src="/anutone-logo.jpeg" className="h-7 w-auto" />
+                  <img src="/symphony-logo.png" className="h-7 w-auto" />
+                </div>
+              </div>
             </div>
-            
-            {/* Stat 3: Reliable Service */}
-            <div className="flex items-start gap-3">
+
+            {/* Reliable Service */}
+            <div className="flex items-start gap-3 min-w-[180px] justify-end">
               <div className="text-blue-400 text-3xl font-bold">★</div>
               <div>
                 <div className="text-sm font-medium text-white">Reliable Service</div>
@@ -164,7 +179,10 @@ const Hero = () => {
                 </div>
               </div>
             </div>
+
           </div>
+        </div>
+
 
         </div>
       </div>
