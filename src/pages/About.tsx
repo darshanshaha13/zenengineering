@@ -83,26 +83,24 @@ const CountUp = ({
 const managingPartners = [
   {
     name: "Darshan Shah",
-    designation: "Managing Partner",
-    image: "/darshan-shah.png", // use your real image path here
-    bio: "Co-founder with expertise in sustainable cooling solutions, driving innovation.",
+    designation: "Managing Partner - Sales & Marketing",
+    image: "/darshan-shah.png",
+    bio: "Leads sales and marketing with a focus on client relationships and growth across Maharashtra.",
     linkedin: "https://www.linkedin.com/in/darshan-shah",
   },
   {
-    name: "Priya Sharma",
-    designation: "Managing Partner",
-    image:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400&q=80",
-    bio: "Specializes in ventilation systems and air quality, ensuring peak performance.",
-    linkedin: "https://www.linkedin.com/in/priya-sharma",
+    name: "Shrikrishna Ganthade",
+    designation: "Managing Partner - Projects",
+    image: "/darshan-shah.png",
+    bio: "Oversees project execution and delivery, ensuring quality workmanship and on-time handovers.",
+    linkedin: "#",
   },
   {
-    name: "Rajesh Singh",
-    designation: "Managing Partner",
-    image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&q=80",
-    bio: "Leads project management and client relations, with 20+ years of experience.",
-    linkedin: "https://www.linkedin.com/in/rajesh-singh",
+    name: "Akshay Gajre",
+    designation: "Managing Partner - Services",
+    image: "/darshan-shah.png",
+    bio: "Heads services and support to maintain system reliability and responsive customer care.",
+    linkedin: "#",
   },
 ];
 

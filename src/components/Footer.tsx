@@ -168,22 +168,22 @@ const Footer = () => {
                 </div>
                 <div className="flex flex-col leading-relaxed">
                   <a
+                    href="tel:+918983187087"
+                    className="hover:text-white transition-colors"
+                  >
+                    Sangli - Akshay Gajre: +91 89831 87087
+                  </a>
+                  <a
+                    href="tel:+919021902201"
+                    className="hover:text-white transition-colors"
+                  >
+                    Kolhapur - Shrikrishna Ganthade: +91 90219 02201
+                  </a>
+                  <a
                     href="tel:+919610029008"
                     className="hover:text-white transition-colors"
                   >
-                    Pune - +91 96100 29008
-                  </a>
-                  <a
-                    href="tel:+911234567890"
-                    className="hover:text-white transition-colors"
-                  >
-                    Kolhapur - +91-1234567890
-                  </a>
-                  <a
-                    href="tel:+911234567890"
-                    className="hover:text-white transition-colors"
-                  >
-                    Sangli - +91-1234567890
+                    Pune - Darshan Shah: +91 96100 29008
                   </a>
                 </div>
               </li>
