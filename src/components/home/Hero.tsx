@@ -156,18 +156,29 @@ const Hero = () => {
             </div>
 
             {/* Partners */}
-            <div className="flex items-start gap-3 min-w-[180px] justify-center">
-              <div>
-                <div className="text-sm font-medium text-white mb-1">
-                  Authorised Partners
-                </div>
-                <div className="flex items-center gap-4">
-                  <img src="/daikin-logo.png" className="h-7 w-auto" />
-                  <img src="/anutone-logo.jpeg" className="h-7 w-auto" />
-                  <img src="/symphony-logo.png" className="h-7 w-auto" />
-                </div>
-              </div>
-            </div>
+            <div className="flex items-center gap-4">
+  <div className="w-[80px] h-[28px] flex items-center justify-center">
+    <img
+      src="/daikin-logo.png"
+      className="max-h-full max-w-full object-contain"
+    />
+  </div>
+
+  <div className="w-[80px] h-[28px] flex items-center justify-center">
+    <img
+      src="/anutone-logo.jpeg"
+      className="max-h-full max-w-full object-contain"
+    />
+  </div>
+
+  <div className="w-[80px] h-[28px] flex items-center justify-center">
+    <img
+      src="/symphony-logo.png"
+      className="max-h-full max-w-full object-contain"
+    />
+  </div>
+</div>
+
 
             {/* Reliable Service */}
             <div className="flex items-start gap-3 min-w-[180px] justify-end">
