@@ -10,10 +10,10 @@ const serviceDetails: Record<string, any> = {
   "acoustic-insulation": {
     title: "Acoustic Insulation & Sound-Proofing Solutions",
     description:
-      "Turnkey acoustic solutions using proven Anutone systems—design, drywalls, ceilings, panelling, and soundproofing for every type of space.",
+      "Turnkey acoustic solutions using proven Anutone systems - design, drywalls, ceilings, panelling, and soundproofing for every type of space.",
     image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?w=1200&q=80",
     overview:
-      "We leverage the proven acoustic systems of Anutone Acoustics to deliver turnkey sound control solutions—from design to installation—for all types of spaces.",
+      "We leverage the proven acoustic systems of Anutone Acoustics to deliver turnkey sound control solutions - from design to installation - for all types of spaces.",
     features: [
       "Acoustic design and consultancy for room-by-room performance",
       "Drywalls and partitions with Anutone-certified systems (e.g., Tufbloc)",
@@ -76,7 +76,7 @@ const serviceDetails: Record<string, any> = {
       "Functional and aesthetic ceiling systems: grid, gypsum, acoustic, baffle/cloud, and metal solutions with service-friendly layouts.",
     image: "https://images.unsplash.com/photo-1505691938895-1758d7feb511?w=1200&q=80",
     overview:
-      "We design and execute ceiling systems that enhance acoustics, conceal services, and elevate interiors—coordinated with HVAC, electrical, and lighting layouts.",
+      "We design and execute ceiling systems that enhance acoustics, conceal services, and elevate interiors - coordinated with HVAC, electrical, and lighting layouts.",
     features: [
       "Grid ceilings, gypsum ceilings, and acoustic ceilings",
       "Cloud shapes, feature elements, baffle, and metal ceilings",
@@ -93,10 +93,10 @@ const serviceDetails: Record<string, any> = {
   "auditorium-home-theatre": {
     title: "Comprehensive Auditorium & Home Theatre Interior Solutions",
     description:
-      "Complete interiors for auditoriums, studios, offices, and premium homes—carpets, acoustic doors, stage flooring, seating, and recliners.",
+      "Complete interiors for auditoriums, studios, offices, and premium homes - carpets, acoustic doors, stage flooring, seating, and recliners.",
     image: "https://images.unsplash.com/photo-1455587734955-081b22074882?w=1200&q=80",
     overview:
-      "We supply and execute specialised interior works with precision materials—from carpets and acoustic doors to stages, auditorium chairs, and recliners—tailored for performance, comfort, and durability.",
+      "We supply and execute specialised interior works with precision materials - from carpets and acoustic doors to stages, auditorium chairs, and recliners - tailored for performance, comfort, and durability.",
     features: [
       "Carpets and carpet tiles for offices, hotels, theatres, and home theatres",
       "High-STC acoustic doors for studios, conference rooms, and auditoriums",
@@ -119,12 +119,12 @@ const ServiceDetail = () => {
 
   if (!service) {
     return (
-      <div className="min-h-screen">
+      <div className="min-h-screen bg-[#030712] text-white">
         {/* <Header /> */}
         <main className="section-padding">
           <div className="container-custom text-center">
             <h1 className="text-4xl font-bold mb-4">Service Not Found</h1>
-            <Button asChild>
+            <Button asChild className="bg-blue-600 hover:bg-blue-500 text-white border border-blue-500/40">
               <NavLink to="/services">
                 <ArrowLeft className="mr-2 h-5 w-5" />
                 Back to Services
@@ -138,22 +138,27 @@ const ServiceDetail = () => {
   }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#030712] text-white">
       {/* <Header /> */}
       
       <main>
         {/* Hero Section */}
-        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[50vh] flex items-center justify-center overflow-hidden bg-[#050A14] text-white">
           <div className="absolute inset-0 z-0">
-            <div className="absolute inset-0 bg-foreground/70 z-10" />
+            <div className="absolute inset-0 bg-[#050A14]/85 z-10" />
             <img
               src={service.image}
               alt={service.title}
               className="w-full h-full object-cover"
             />
           </div>
-          <div className="container-custom relative z-20 text-center text-background">
-            <Button variant="outline" size="sm" asChild className="mb-6 bg-background/10 backdrop-blur-sm border-background/20 text-background hover:bg-background/20">
+          <div className="container-custom relative z-20 text-center text-white">
+            <Button
+              variant="outline"
+              size="sm"
+              asChild
+              className="mb-6 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white/15 hover:border-white/40"
+            >
               <NavLink to="/services">
                 <ArrowLeft className="mr-2 h-4 w-4" />
                 Back to Services
@@ -162,18 +167,18 @@ const ServiceDetail = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-4 animate-slide-up">
               {service.title}
             </h1>
-            <p className="text-xl text-background/90 max-w-3xl mx-auto animate-fade-in">
+            <p className="text-xl text-white/80 max-w-3xl mx-auto animate-fade-in">
               {service.description}
             </p>
           </div>
         </section>
 
         {/* Overview */}
-        <section className="section-padding">
+        <section className="section-padding bg-[#030712] text-white border-t border-white/5">
           <div className="container-custom max-w-4xl">
             <div className="animate-fade-in">
               <h2 className="text-3xl font-bold mb-6">Overview</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <p className="text-lg text-slate-300 leading-relaxed">
                 {service.overview}
               </p>
             </div>
@@ -181,35 +186,35 @@ const ServiceDetail = () => {
         </section>
 
         {/* Features & Benefits */}
-        <section className="section-padding bg-section-bg">
+        <section className="section-padding bg-[#050A14] text-white border-t border-white/5">
           <div className="container-custom">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-              <Card className="border-none shadow-lg animate-scale-in">
+              <Card className="border border-white/10 bg-white/5 shadow-xl shadow-black/30 animate-scale-in">
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6">Key Features</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-white">Key Features</h3>
                   <ul className="space-y-4">
                     {service.features.map((feature: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check className="h-4 w-4 text-primary" />
+                        <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="h-4 w-4 text-blue-400" />
                         </div>
-                        <span className="text-muted-foreground">{feature}</span>
+                        <span className="text-slate-300">{feature}</span>
                       </li>
                     ))}
                   </ul>
                 </CardContent>
               </Card>
 
-              <Card className="border-none shadow-lg animate-scale-in" style={{ animationDelay: "0.1s" }}>
+              <Card className="border border-white/10 bg-white/5 shadow-xl shadow-black/30 animate-scale-in" style={{ animationDelay: "0.1s" }}>
                 <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6">Benefits</h3>
+                  <h3 className="text-2xl font-bold mb-6 text-white">Benefits</h3>
                   <ul className="space-y-4">
                     {service.benefits.map((benefit: string, index: number) => (
                       <li key={index} className="flex items-start gap-3">
-                        <div className="w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <Check className="h-4 w-4 text-primary" />
+                        <div className="w-6 h-6 rounded-full bg-blue-500/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <Check className="h-4 w-4 text-blue-400" />
                         </div>
-                        <span className="text-muted-foreground">{benefit}</span>
+                        <span className="text-slate-300">{benefit}</span>
                       </li>
                     ))}
                   </ul>
@@ -220,17 +225,21 @@ const ServiceDetail = () => {
         </section>
 
         {/* CTA Section */}
-        <section className="section-padding">
+        <section className="section-padding bg-[#030712] text-white border-t border-white/5">
           <div className="container-custom">
-            <Card className="border-none shadow-2xl bg-gradient-to-br from-primary to-accent text-primary-foreground overflow-hidden">
+            <Card className="border border-blue-500/30 bg-white/5 backdrop-blur-sm shadow-2xl text-white overflow-hidden">
               <CardContent className="p-12 text-center">
                 <h2 className="text-4xl font-bold mb-4">
                   Ready to Get Started?
                 </h2>
-                <p className="text-xl mb-8 text-primary-foreground/90 max-w-2xl mx-auto">
+                <p className="text-xl mb-8 text-slate-200 max-w-2xl mx-auto">
                   Contact us today to discuss your {service.title.toLowerCase()} requirements and get a customized solution.
                 </p>
-                <Button size="lg" variant="secondary" asChild>
+                <Button
+                  size="lg"
+                  className="bg-blue-600 hover:bg-blue-500 text-white border border-blue-500/50"
+                  asChild
+                >
                   <NavLink to="/contact">
                     Request a Quote
                   </NavLink>
