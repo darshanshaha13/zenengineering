@@ -10,7 +10,7 @@ const channelPartners = [
   },
   {
     name: "Anutone",
-    logoSrc: "/anutone-logo.jpeg",
+    logoSrc: "/anutone-logo.png",
   },
   {
     name: "Symphony",
