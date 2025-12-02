@@ -40,17 +40,14 @@ const Footer = () => {
           {/* --- COLUMN 1: Brand (Span 4 cols) --- */}
           <div className="lg:col-span-4 space-y-6">
             <Link to="/" className="flex items-center gap-3 group w-fit">
-              {/* Logo matches Navbar */}
-              <div className="relative h-10 w-10 rounded-xl overflow-hidden flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-transparent border border-blue-500/30 group-hover:border-blue-400/50 transition-colors">
-                <img
-                  src="/zen-logo.png"
-                  alt="Zen Engineering"
-                  className="h-6 w-6 object-contain relative z-10"
-                />
-              </div>
+              <img
+                src="/zen-logo.png"
+                alt="Zen Engineering"
+                className="h-12 w-12 md:h-14 md:w-14 object-contain rounded-xl drop-shadow-[0_0_18px_rgba(59,130,246,0.45)]"
+              />
               <div className="flex flex-col">
                 <span className="text-lg font-bold tracking-wider text-white leading-none">
-                  ZEN<span className="text-blue-400"> </span>ENGINEERING SOLUTIONS (R)
+                  ZEN<span className="text-blue-400"> </span>ENGINEERING SOLUTIONS
                 </span>
                 <span className="text-[10px] uppercase tracking-[0.18em] text-slate-300 font-semibold mt-1">
                   Engineering Comfort. Delivering Excellence.

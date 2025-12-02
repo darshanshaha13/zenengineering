@@ -1,48 +1,22 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, PlayCircle, CheckCircle2 } from "lucide-react";
+import { ArrowRight, PlayCircle, Sparkles } from "lucide-react";
 import ShinyText from "@/components/ui/ShinyText/ShinyText";
 import { Link } from "react-router-dom";
 
-// ⬇️ PartnerLogos Component
-const PartnerLogos = () => {
-  const partners = [
-    {
-      name: "Daikin",
-      logoSrc: "/daikin-logo.png",
-    },
-    {
-      name: "Anutone",
-      logoSrc: "/anutone-logo.jpeg",
-    },
-    {
-      name: "Symphony",
-      logoSrc: "/symphony-logo.png",
-    },
-  ];
-
-  return (
-    <div className="flex flex-col">
-      <div className="text-sm font-medium text-white mb-1">
-        Authorised Partners
-      </div>
-      <div className="flex items-center space-x-4">
-        {partners.map((partner) => (
-          <div
-            key={partner.name}
-            className="h-7 opacity-100 hover:scale-105 transition-all duration-300"
-          >
-            <img
-              src={partner.logoSrc}
-              alt={`${partner.name} logo`}
-              className="h-full w-auto object-contain drop-shadow-[0_0_10px_rgba(255,255,255,0.1)]"
-            />
-          </div>
-        ))}
-      </div>
-    </div>
-  );
-};
-// ⬆️ PartnerLogos Component
+const channelPartners = [
+  {
+    name: "Daikin",
+    logoSrc: "/daikin-logo.png",
+  },
+  {
+    name: "Anutone",
+    logoSrc: "/anutone-logo.jpeg",
+  },
+  {
+    name: "Symphony",
+    logoSrc: "/symphony-logo.png",
+  },
+];
 
 const Hero = () => {
   return (
@@ -138,62 +112,44 @@ const Hero = () => {
             </Button>
           </div>
 
-          {/* Stats bar – UPDATED LAYOUT */}
-                  <div
-          className="max-w-4xl rounded-xl bg-[#050A14]/80 p-6 
-                    ring-1 ring-inset ring-blue-500/20 
-                    shadow-[0_0_30px_rgba(59,130,246,0.15)]"
+          {/* Channel partners highlight */}
+          {/* Channel partners highlight */}
+          <br></br>
+<div className="max-w-4xl mt-4">
+  <div className="flex flex-wrap items-center gap-3">
+
+    {/* Icon */}
+    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 text-white shadow-[0_12px_35px_rgba(59,130,246,0.35)]">
+      <Sparkles className="h-5 w-5" />
+    </div>
+
+    {/* Title */}
+    <div className="text-[11px] uppercase tracking-[0.2em] text-slate-200/80 mr-2">
+      Our Channel Partners:
+    </div>
+
+    {/* Logos — inline */}
+    <div className="flex flex-nowrap items-center gap-3 md:gap-4">
+      {channelPartners.map((partner) => (
+        <div
+          key={partner.name}
+          className="group relative flex h-12 w-[130px] items-center justify-center rounded-lg bg-gradient-to-br from-white/10 via-white/5 to-transparent px-3 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-0.5 hover:ring-blue-400/50"
         >
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-
-            {/* Offices */}
-            <div className="flex items-start gap-3 min-w-[180px]">
-              <div className="text-blue-400 text-3xl font-bold">3</div>
-              <div>
-                <div className="text-sm font-medium text-white">Offices</div>
-                <div className="text-[12px] text-slate-400">Across Maharashtra</div>
-              </div>
-            </div>
-
-            {/* Partners */}
-            <div className="flex items-center gap-4">
-  <div className="w-[80px] h-[28px] flex items-center justify-center">
-    <img
-      src="/daikin-logo.png"
-      className="max-h-full max-w-full object-contain"
-    />
-  </div>
-
-  <div className="w-[80px] h-[28px] flex items-center justify-center">
-    <img
-      src="/anutone-logo.jpeg"
-      className="max-h-full max-w-full object-contain"
-    />
-  </div>
-
-  <div className="w-[80px] h-[34px] flex items-center justify-center">
-    <img
-      src="/symphony-logo.png"
-      className="max-h-full max-w-full object-contain"
-    />
+          <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/15 via-cyan-400/10 to-blue-500/15 opacity-0 blur-sm transition duration-300 group-hover:opacity-100" />
+          <img
+            src={partner.logoSrc}
+            alt={`${partner.name} logo`}
+            className="relative z-10 max-h-10 w-auto object-contain"
+          />
+        </div>
+      ))}
+    </div>
   </div>
 </div>
-
-
-            {/* Reliable Service */}
-            <div className="flex items-start gap-3 min-w-[180px] justify-end">
-              <div className="text-blue-400 text-3xl font-bold">★</div>
-              <div>
-                <div className="text-sm font-medium text-white">Reliable Service</div>
-                <div className="text-[12px] text-slate-400">
-                  Materials & installations you can trust
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
+      <div>
+        <br></br>
+        
+      </div>
 
         </div>
       </div>
