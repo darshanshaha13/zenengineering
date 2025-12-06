@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 const channelPartners = [
   {
     name: "Daikin",
-    logoSrc: "/daikin-logo.png",
+    logoSrc: "/logos/daikin-logo.png",
   },
   {
     name: "Anutone",
-    logoSrc: "/anutone-logo.png",
+    logoSrc: "/logos/anutone-logo.png",
   },
   {
     name: "Symphony",
-    logoSrc: "/symphony-logo.png",
+    logoSrc: "/logos/symphony-logo.png",
   },
 ];
 
