@@ -5,7 +5,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, MapPin } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
+import {
+  buildAbsoluteUrl,
+  organizationSchema,
+  siteMeta,
+} from "@/seo/siteMeta";
 
 
 // --- Consistent Dark Theme Constants (Copied from About.tsx) ---
@@ -127,13 +132,28 @@ const Projects = () => {
     <div className={`min-h-screen bg-[${DARK_BG}]`}>
       {/* <Header /> */}
 
-      <Helmet>
-        <title>Projects | Zen Engineering Solutions</title>
-        <meta
-          name="description"
-          content="Explore featured engineering projects by Zen Engineering Solutions, including acoustic treatments, HVAC design, insulation and climate control for commercial, industrial, educational and residential spaces across Maharashtra."
-        />
-      </Helmet>
+      <Seo
+        title="Projects | Zen Engineering Solutions"
+        description="Explore featured engineering projects by Zen Engineering Solutions, including acoustic treatments, HVAC design, insulation and climate control for commercial, industrial, educational and residential spaces across Maharashtra."
+        canonicalPath="/projects"
+        image={projects[0]?.image}
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Engineering Projects",
+            itemListElement: projects.map((project, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: project.title,
+              url: buildAbsoluteUrl(`/projects/${project.id}`),
+              image: buildAbsoluteUrl(project.image),
+              description: project.description,
+            })),
+          },
+          { ...organizationSchema, "@id": `${siteMeta.siteUrl}#organization` },
+        ]}
+      />
       
       <main>
         {/* Hero Section - UPDATED TO MATCH About.tsx STYLE */}

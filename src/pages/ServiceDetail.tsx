@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { NavLink } from "@/components/NavLink";
 import { ArrowLeft, Check } from "lucide-react";
+import Seo from "@/components/Seo";
+import { buildAbsoluteUrl, siteMeta } from "@/seo/siteMeta";
 
 const serviceDetails: Record<string, any> = {
   "acoustic-insulation": {
@@ -137,10 +139,22 @@ const serviceDetails: Record<string, any> = {
 const ServiceDetail = () => {
   const { slug } = useParams<{ slug: string }>();
   const service = slug ? serviceDetails[slug] : null;
+  const seoTitle = service
+    ? `${service.title} | Services | ${siteMeta.name}`
+    : `Service | ${siteMeta.name}`;
+  const seoDescription =
+    service?.description ??
+    "Detailed service information from Zen Engineering Solutions.";
 
   if (!service) {
     return (
       <div className="min-h-screen bg-[#030712] text-white">
+        <Seo
+          title="Service Not Found | Zen Engineering Solutions"
+          description="The requested service could not be found at Zen Engineering Solutions."
+          canonicalPath={`/services/${slug ?? ""}`}
+          robots="noindex,nofollow"
+        />
         {/* <Header /> */}
         <main className="section-padding">
           <div className="container-custom text-center">
@@ -160,6 +174,31 @@ const ServiceDetail = () => {
 
   return (
     <div className="min-h-screen bg-[#030712] text-white">
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        canonicalPath={`/services/${slug ?? ""}`}
+        image={service.image}
+        type="article"
+        structuredData={
+          service
+            ? {
+                "@context": "https://schema.org",
+                "@type": "Service",
+                name: service.title,
+                description: service.description,
+                serviceType: service.title,
+                provider: {
+                  "@type": "Organization",
+                  name: siteMeta.name,
+                  url: siteMeta.siteUrl,
+                },
+                areaServed: "Maharashtra, India",
+                image: buildAbsoluteUrl(service.image),
+              }
+            : undefined
+        }
+      />
       {/* <Header /> */}
       
       <main>

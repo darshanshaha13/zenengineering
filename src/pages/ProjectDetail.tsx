@@ -6,6 +6,8 @@ import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { NavLink } from "@/components/NavLink";
 import { ArrowLeft, MapPin, Calendar, Ruler } from "lucide-react";
+import Seo from "@/components/Seo";
+import { buildAbsoluteUrl, siteMeta } from "@/seo/siteMeta";
 
 const DARK_BG = "#050A14";
 const SECONDARY_BG = "#0B1120";
@@ -113,10 +115,22 @@ const projectData: Record<string, any> = {
 const ProjectDetail = () => {
   const { id } = useParams<{ id: string }>();
   const project = id ? projectData[id] : null;
+  const seoTitle = project
+    ? `${project.title} | Projects | ${siteMeta.name}`
+    : `Project | ${siteMeta.name}`;
+  const seoDescription =
+    project?.description ??
+    "Detailed project information from Zen Engineering Solutions.";
 
   if (!project) {
     return (
       <div className={`min-h-screen bg-[${DARK_BG}] text-white`}>
+        <Seo
+          title="Project Not Found | Zen Engineering Solutions"
+          description="The requested project could not be found at Zen Engineering Solutions."
+          canonicalPath={`/projects/${id ?? ""}`}
+          robots="noindex,nofollow"
+        />
         {/* <Header /> */}
         <main className="section-padding">
           <div className="container-custom text-center">
@@ -136,6 +150,28 @@ const ProjectDetail = () => {
 
   return (
     <div className={`min-h-screen bg-[${DARK_BG}] text-white`}>
+      <Seo
+        title={seoTitle}
+        description={seoDescription}
+        canonicalPath={`/projects/${id ?? ""}`}
+        image={project.heroImage}
+        type="article"
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "Project",
+          name: project.title,
+          description: project.description,
+          location: project.location,
+          image: buildAbsoluteUrl(project.heroImage),
+          provider: {
+            "@type": "Organization",
+            name: siteMeta.name,
+            url: siteMeta.siteUrl,
+          },
+          startDate: project.year,
+          areaServed: "Maharashtra, India",
+        }}
+      />
       {/* <Header /> */}
       
       <main>

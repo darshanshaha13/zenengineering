@@ -6,7 +6,12 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare } from "lucide-react";
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
+import {
+  buildAbsoluteUrl,
+  organizationSchema,
+  siteMeta,
+} from "@/seo/siteMeta";
 
 
 // --- Consistent Dark Theme Constants from About.tsx ---
@@ -24,13 +29,27 @@ const Contact = () => {
     // Set the overall container background to the DARK_BG color for uniformity
     <div className={`min-h-screen bg-[${DARK_BG}]`}>
 
-      <Helmet>
-        <title>Contact Us | Zen Engineering Solutions</title>
-        <meta
-          name="description"
-          content="Contact Zen Engineering Solutions for Acoustic, HVAC, Insulation, and turnkey engineering services. Offices in Pune, Kolhapur & Sangli. Reach us via phone, WhatsApp, or email."
-        />
-      </Helmet>
+      <Seo
+        title="Contact Us | Zen Engineering Solutions"
+        description="Contact Zen Engineering Solutions for Acoustic, HVAC, Insulation, and turnkey engineering services. Offices in Pune, Kolhapur & Sangli. Reach us via phone, WhatsApp, or email."
+        canonicalPath="/contact"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            name: "Contact Zen Engineering Solutions",
+            description:
+              "Get in touch for HVAC, acoustic, insulation, ceiling, and air cooler projects across Maharashtra.",
+            url: buildAbsoluteUrl("/contact"),
+            publisher: {
+              "@type": "Organization",
+              name: siteMeta.name,
+              url: siteMeta.siteUrl,
+            },
+          },
+          { ...organizationSchema, "@id": `${siteMeta.siteUrl}#organization` },
+        ]}
+      />
       {/* <Header /> */}
       <main>
         {/* =======================================================================================

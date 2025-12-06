@@ -2,6 +2,7 @@
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Home } from "lucide-react";
+import Seo from "@/components/Seo";
 
 // --- Consistent Dark Theme Constants from Contact.tsx ---
 const DARK_BG = "#050A14"; 
@@ -17,6 +18,12 @@ const ThankYou = () => {
     // Use the same overall container background as Contact.tsx
     <div className={`min-h-screen bg-[${DARK_BG}] flex flex-col justify-between`}>
       {/* <Header /> */}
+      <Seo
+        title="Thank You | Zen Engineering Solutions"
+        description="Thanks for contacting Zen Engineering Solutions. We will respond within 24 hours."
+        canonicalPath="/thank-you"
+        robots="noindex,nofollow"
+      />
       
       <main className="flex-grow flex items-center justify-center section-padding">
         <div className="container-custom relative z-10 text-center">

@@ -4,7 +4,12 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useState } from "react";
 import { ArrowRight, GalleryHorizontal } from "lucide-react"; // Added GalleryHorizontal icon
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
+import {
+  buildAbsoluteUrl,
+  organizationSchema,
+  siteMeta,
+} from "@/seo/siteMeta";
 
 // --- Consistent Dark Theme Constants from About.tsx ---
 const DARK_BG = "#050A14"; 
@@ -41,13 +46,24 @@ const Gallery = () => {
     <div className={`min-h-screen bg-[${DARK_BG}]`}>
       {/* <Header /> */}
 
-      <Helmet>
-        <title>Gallery | Zen Engineering Solutions</title>
-        <meta
-          name="description"
-          content="Browse the gallery of 500+ completed Acoustic, HVAC, Industrial, Commercial, Residential and Healthcare engineering projects delivered by Zen Engineering Solutions across India."
-        />
-      </Helmet>
+      <Seo
+        title="Gallery | Zen Engineering Solutions"
+        description="Browse the gallery of 500+ completed Acoustic, HVAC, Industrial, Commercial, Residential and Healthcare engineering projects delivered by Zen Engineering Solutions across India."
+        canonicalPath="/gallery"
+        image={galleryImages[0]?.url}
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: "Zen Engineering Solutions Project Gallery",
+            description:
+              "Photos and highlights from Zen Engineering Solutions projects across Maharashtra.",
+            url: buildAbsoluteUrl("/gallery"),
+            numberOfItems: galleryImages.length,
+          },
+          { ...organizationSchema, "@id": `${siteMeta.siteUrl}#organization` },
+        ]}
+      />
 
       <main>
         {/* =======================================================================================

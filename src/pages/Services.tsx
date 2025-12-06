@@ -5,7 +5,12 @@ import { Button } from "@/components/ui/button";
 import { Wind, Volume2, Layers, Thermometer, ArrowRight, PlayCircle, Clapperboard } from "lucide-react";
 import { NavLink } from "react-router-dom"; // Assuming you use react-router-dom NavLink/Link
 import ShinyText from "@/components/ui/ShinyText/ShinyText"; // Assuming this utility is available
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
+import {
+  buildAbsoluteUrl,
+  organizationSchema,
+  siteMeta,
+} from "@/seo/siteMeta";
 
 
 const services = [
@@ -185,13 +190,27 @@ const ServicesHero = () => {
 const Services = () => {
   return (
     <div className="min-h-screen">
-      <Helmet>
-        <title>Services | Zen Engineering Solutions</title>
-        <meta
-          name="description"
-          content="Explore HVAC, acoustic, thermal, Air Cooler and ceiling solutions delivered by Zen Engineering Solutions across Maharashtra."
-        />
-      </Helmet>
+      <Seo
+        title="Services | Zen Engineering Solutions"
+        description="Explore HVAC, acoustic, thermal, Air Cooler and ceiling solutions delivered by Zen Engineering Solutions across Maharashtra."
+        canonicalPath="/services"
+        image="/services.jpg"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            name: "Engineering Services",
+            itemListElement: services.map((service, index) => ({
+              "@type": "ListItem",
+              position: index + 1,
+              name: service.title,
+              url: buildAbsoluteUrl(`/services/${service.slug}`),
+              description: service.description,
+            })),
+          },
+          { ...organizationSchema, "@id": `${siteMeta.siteUrl}#organization` },
+        ]}
+      />
 
       {/* <Header /> */}
       <main>

@@ -14,7 +14,12 @@ import TiltWrapper from "@/components/ui/TiltWrapper";
 import { useState, useEffect, useRef } from "react";
 import ShinyText from "@/components/ui/ShinyText/ShinyText";
 import { Button } from "@/components/ui/button";
-import { Helmet } from "react-helmet-async";
+import Seo from "@/components/Seo";
+import {
+  buildAbsoluteUrl,
+  organizationSchema,
+  siteMeta,
+} from "@/seo/siteMeta";
 
 // --- Consistent Dark Theme Constants ---
 const DARK_BG = "#050A14";
@@ -149,13 +154,24 @@ const About = () => {
   return (
     // Overall page background
     <div className={`min-h-screen bg-[${DARK_BG}]`}>
-      <Helmet>
-        <title>About Us | Zen Engineering Solutions</title>
-        <meta
-          name="description"
-          content="Zen Engineering Solutions delivers premium HVAC, acoustic, thermal, Air Cooler and ceiling solutions across Maharashtra with HQ in Sangli and branches in Kolhapur & Pune."
-        />
-      </Helmet>
+      <Seo
+        title="About Us | Zen Engineering Solutions"
+        description="Zen Engineering Solutions delivers premium HVAC, acoustic, thermal, Air Cooler and ceiling solutions across Maharashtra with HQ in Sangli and branches in Kolhapur & Pune."
+        canonicalPath="/about"
+        image="/about.png"
+        structuredData={[
+          {
+            "@context": "https://schema.org",
+            "@type": "AboutPage",
+            name: "About Zen Engineering Solutions",
+            description:
+              "Learn about Zen Engineering Solutions and our HVAC, acoustic, thermal insulation, ceiling, and air cooler expertise across Maharashtra.",
+            url: buildAbsoluteUrl("/about"),
+            primaryImageOfPage: buildAbsoluteUrl("/about.png"),
+          },
+          { ...organizationSchema, "@id": `${siteMeta.siteUrl}#organization` },
+        ]}
+      />
 
       {/* <Header /> */}
       <main>
