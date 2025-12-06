@@ -18,6 +18,7 @@ const GLASS_CARD_BASE = `border ${BORDER_DARK} bg-white/5 backdrop-blur-lg`;
 const GLASS_CARD_HOVER = `shadow-xl shadow-black/30 hover:-translate-y-2 hover:shadow-2xl hover:shadow-blue-500/20 transition-all duration-300`;
 
 
+
 const projects = [
   {
     id: 1,
