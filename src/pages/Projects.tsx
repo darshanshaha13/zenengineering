@@ -27,36 +27,36 @@ const GLASS_CARD_HOVER = `shadow-xl shadow-black/30 hover:-translate-y-2 hover:s
 const projects = [
   {
     id: 1,
-    title: "Premium Office Complex - Acoustic Treatment",
-    category: "Acoustic & HVAC",
-    location: "Pune, Maharashtra",
-    area: "50,000 sq ft",
+    title: "Ayurvedic Medical College, Baramati",
+    category: "Auditorium Acoustics",
+    location: "Baramati, Maharashtra",
+    area: "350-seater auditorium",
     year: "2024",
-    image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80",
-    description: "Complete acoustic treatment and climate control for a modern office space with open workstations and conference rooms.",
-    tags: ["Commercial", "Acoustic", "HVAC"]
+    image: "/projects/01/01-ACB-01.jpg",
+    description: "350-seater Ayurvedic Medical College auditorium finished with Anutone Slat Surco Lite, Stretch Hush, Rosetta carpet, and Polywool acoustic treatments.",
+    tags: ["Auditorium", "Acoustic", "Carpet"]
   },
   {
     id: 2,
-    title: "Educational Institution Campus",
-    category: "Insulation & HVAC",
-    location: "Kolhapur, Maharashtra",
-    area: "100,000 sq ft",
-    year: "2023",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=800&q=80",
-    description: "Advanced insulation and HVAC systems for multiple buildings including classrooms, laboratories, and auditoriums.",
-    tags: ["Educational", "Insulation", "HVAC"]
+    title: "Southern Star Auditorium, Camp",
+    category: "Auditorium Acoustics",
+    location: "Pune, Maharashtra",
+    area: "600-seater auditorium",
+    year: "2024",
+    image: "/projects/02/02-01.jpg",
+    description: "600-seater Southern Star Auditorium with Anutone Slat Surco Lite, Hush Panel, Matt Ebony, Ebony, Sisoli Serene, and Astral Lay-in metal ceiling finishes.",
+    tags: ["Auditorium", "Acoustic", "Metal Ceiling"]
   },
   {
     id: 3,
-    title: "Manufacturing Facility Climate Control",
-    category: "Climate Control",
+    title: "KIMS-UAIMS Hospital, Sangli",
+    category: "Acoustic Ceilings",
     location: "Sangli, Maharashtra",
-    area: "75,000 sq ft",
+    area: "Acoustic baffle ceiling",
     year: "2024",
-    image: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=800&q=80",
-    description: "Industrial-grade climate control and acoustic solutions for production environment with strict temperature requirements.",
-    tags: ["Industrial", "Climate Control", "Acoustic"]
+    image: "/projects/03/03-01.jpg",
+    description: "Custom 30mm PET acoustic baffle ceiling for KIMS-UAIMS Hospital, Sangli, delivering controlled reverberation in clinical spaces.",
+    tags: ["Healthcare", "Acoustic Ceiling", "Baffles"]
   },
   {
     id: 4,

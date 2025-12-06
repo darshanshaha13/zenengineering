@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent } from "@/components/ui/card";
 import { NavLink } from "@/components/NavLink";
-import { ArrowLeft, MapPin, Calendar, Ruler } from "lucide-react";
+import { ArrowLeft, MapPin, Calendar, Ruler, Check } from "lucide-react";
 import Seo from "@/components/Seo";
 import { buildAbsoluteUrl, siteMeta } from "@/seo/siteMeta";
 
@@ -18,97 +18,97 @@ const ACCENT = "text-blue-400";
 
 const projectData: Record<string, any> = {
   "1": {
-    title: "Premium Office Complex - Acoustic Treatment",
-    category: "Acoustic & HVAC",
-    location: "Pune, Maharashtra",
-    area: "50,000 sq ft",
+    title: "Ayurvedic Medical College, Baramati",
+    category: "Auditorium Acoustics",
+    location: "Baramati, Maharashtra",
+    area: "350-seater auditorium",
     year: "2024",
-    client: "TechCorp Industries",
-    duration: "6 months",
-    heroImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
+    client: "Ayurvedic Medical College",
+    duration: "Turnkey execution",
+    heroImage: "/projects/01/01-ACB-01.jpg",
     images: [
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&q=80",
-      "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&q=80",
-      "https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?w=800&q=80"
+      "/projects/01/01-ACB-01.jpg",
+      "/projects/01/01-ACB-02.jpg",
+      "/projects/01/01-ACB-03.jpg",
+      "/projects/01/01-ACB-04.jpg",
+      "/projects/01/01-ACB-05.jpg"
     ],
-    description: "Complete acoustic treatment and climate control for a modern office space featuring open workstations, private offices, and conference rooms.",
-    challenge: "The client required a solution that would minimize noise transmission between open workspaces while maintaining an open, collaborative environment. Additionally, the HVAC system needed to operate quietly without compromising air quality.",
-    solution: "We implemented a comprehensive acoustic treatment using sound-absorbing panels, strategic space planning, and white noise systems. The HVAC design included low-velocity air distribution and vibration isolation to ensure whisper-quiet operation.",
+    description: "350-seater auditorium outfitted with Anutone Slat Surco Lite, Stretch Hush, Rosetta carpet, and Polywool for balanced absorption and premium finishes.",
+    challenge: "Deliver even reverberation control and speech clarity across a 350-seat hall while integrating multiple acoustic materials into a cohesive visual language.",
+    solution: "Applied layered acoustic wall panelling, acoustic grid ceiling, carpeted flooring, stage flooring, and acoustic doors using Anutone and Rosetta systems with Polywool infill.",
     results: [
-      "40% reduction in ambient noise levels",
-      "95% client satisfaction rating",
-      "25% improvement in employee productivity metrics",
-      "LEED Gold certification achieved"
+      "Speech intelligibility improved for the full seating bowl",
+      "Comfortable reverberation time suited for lectures and events",
+      "Durable finishes for high footfall academic use"
     ],
     specifications: [
-      { label: "Acoustic Panels", value: "Custom-designed fabric-wrapped panels" },
-      { label: "HVAC System", value: "Variable Refrigerant Flow (VRF) with Smart Controls" },
-      { label: "Insulation", value: "High-density mineral wool, R-value 30" },
-      { label: "Sound Rating", value: "NRC 0.85, STC 55" }
+      { label: "Capacity", value: "350 seats" },
+      { label: "Products Used", value: "Anutone Slat Surco Lite, Anutone Stretch Hush, Rosetta carpet, Polywool" },
+      { label: "Scope", value: "Acoustic wall panelling, acoustic grid ceiling, carpet, acoustic doors, stage flooring" }
     ],
-    tags: ["Commercial", "Acoustic", "HVAC", "LEED Certified"]
+    tags: ["Auditorium", "Acoustic", "Carpet"]
   },
   "2": {
-    title: "Educational Institution Campus",
-    category: "Insulation & HVAC",
-    location: "Kolhapur, Maharashtra",
-    area: "100,000 sq ft",
-    year: "2023",
-    client: "Bharati Vidyapeeth University",
-    duration: "10 months",
-    heroImage: "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80",
+    title: "Southern Star Auditorium, Camp",
+    category: "Auditorium Acoustics",
+    location: "Pune, Maharashtra",
+    area: "600-seater auditorium",
+    year: "2024",
+    client: "Southern Star Auditorium",
+    duration: "Turnkey execution",
+    heroImage: "/projects/02/02-01.jpg",
     images: [
-      "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80",
-      "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?w=800&q=80",
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?w=800&q=80"
+      "/projects/02/02-01.jpg",
+      "/projects/02/02-02.jpg",
+      "/projects/02/02-03.jpg",
+      "/projects/02/02-04.jpg",
+      "/projects/02/02-05.jpg",
+      "/projects/02/02-06.jpg"
     ],
-    description: "Advanced insulation and HVAC systems for multiple buildings including classrooms, laboratories, auditoriums, and administrative offices.",
-    challenge: "Each building type required different climate control strategies to accommodate varying occupancy patterns, equipment heat loads, and acoustic requirements for learning environments.",
-    solution: "We designed a centralized chiller plant with decentralized air handling units for flexible zone control. Specialized acoustic treatments were installed in lecture halls and auditoriums, while laboratories received dedicated exhaust systems.",
+    description: "600-seater auditorium featuring Anutone Slat Surco Lite, Hush Panel, Matt Ebony, Ebony, Sisoli Serene, and Astral lay-in metal ceilings for immersive sound and premium aesthetics.",
+    challenge: "Achieve uniform absorption and diffusion across a large 600-seat auditorium while blending multiple Anutone finishes with metal ceiling elements.",
+    solution: "Installed mixed acoustic surfaces combining slat panels, stretch fabric, timber finishes, and metal lay-in ceilings to control reflections and deliver a refined interior.",
     results: [
-      "30% reduction in energy consumption",
-      "Improved indoor air quality across all buildings",
-      "Enhanced learning environment with optimal acoustics",
-      "99.8% system uptime during academic sessions"
+      "Balanced reverberation suited for speech and performance",
+      "Consistent acoustic experience across all seating zones",
+      "Premium layered finishes aligned with the hall design"
     ],
     specifications: [
-      { label: "Chiller Capacity", value: "500 TR with heat recovery" },
-      { label: "Insulation Type", value: "Spray foam and rigid board, R-value 38" },
-      { label: "Control System", value: "Building Management System with scheduling" },
-      { label: "Ventilation", value: "100% fresh air in labs, 30% in classrooms" }
+      { label: "Capacity", value: "600 seats" },
+      { label: "Products Used", value: "Anutone Slat Surco Lite, Anutone Hush Panel, Anutone Matt Ebony, Anutone Ebony, Anutone Sisoli Serene, Astral lay-in metal ceiling" },
+      { label: "Scope", value: "Acoustic wall and ceiling treatments with metal ceiling integration" }
     ],
-    tags: ["Educational", "Insulation", "HVAC", "Energy Efficient"]
+    tags: ["Auditorium", "Acoustic", "Metal Ceiling"]
   },
   "3": {
-    title: "Manufacturing Facility Climate Control",
-    category: "Climate Control",
+    title: "KIMS-UAIMS Hospital, Sangli",
+    category: "Acoustic Ceilings",
     location: "Sangli, Maharashtra",
-    area: "75,000 sq ft",
+    area: "Acoustic baffle ceiling",
     year: "2024",
-    client: "PrecisionTech Manufacturing",
-    duration: "8 months",
-    heroImage: "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80",
+    client: "KIMS-UAIMS Hospital",
+    duration: "Turnkey execution",
+    heroImage: "/projects/03/03-01.jpg",
     images: [
-      "https://images.unsplash.com/photo-1587293852726-70cdb56c2866?w=800&q=80",
-      "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=800&q=80",
-      "https://images.unsplash.com/photo-1581094271901-8022df4466f9?w=800&q=80"
+      "/projects/03/03-01.jpg",
+      "/projects/03/03-02.jpg",
+      "/projects/03/03-03.jpg",
+      "/projects/03/03-04.jpg"
     ],
-    description: "Industrial-grade climate control and acoustic solutions for a production environment with strict temperature and humidity requirements.",
-    challenge: "Manufacturing processes required precise temperature control (+/- 2 F) and humidity management (50 +/- 5% RH) to ensure product quality. Additionally, noise from machinery needed to be controlled to meet OSHA standards.",
-    solution: "We installed a high-precision HVAC system with redundant components, continuous monitoring, and automatic failover capabilities. Acoustic barriers and vibration isolation were implemented around high-noise equipment.",
+    description: "Custom 30mm PET acoustic baffle ceiling designed to manage reverberation in critical healthcare areas at KIMS-UAIMS Hospital.",
+    challenge: "Reduce echo in large hospital volumes without obstructing services or lighting while maintaining hygienic, easy-to-clean surfaces.",
+    solution: "Fabricated and installed 30mm customized PET acoustic baffles with coordinated spacing to deliver absorption and visual rhythm without blocking utilities.",
     results: [
-      "+/- 1 F temperature control achieved",
-      "35% reduction in production defects related to environmental conditions",
-      "Noise levels reduced by 15 dB throughout facility",
-      "Zero unplanned downtime in first year of operation"
+      "Noticeable drop in echo and improved speech clarity in circulation zones",
+      "Lightweight baffles compatible with existing services and maintenance",
+      "Durable PET construction suited for healthcare hygiene standards"
     ],
     specifications: [
-      { label: "HVAC Type", value: "Precision air conditioning with hot gas reheat" },
-      { label: "Monitoring", value: "Real-time sensors with predictive maintenance" },
-      { label: "Acoustic Treatment", value: "Sound barriers, NRC 0.90" },
-      { label: "Redundancy", value: "N+1 configuration for critical systems" }
+      { label: "Scope", value: "Acoustic baffle ceiling" },
+      { label: "Products Used", value: "30mm customized acoustic baffle of PET panel" },
+      { label: "Application", value: "Healthcare circulation and common areas" }
     ],
-    tags: ["Industrial", "Climate Control", "Acoustic", "Precision"]
+    tags: ["Healthcare", "Acoustic Ceiling", "Baffles"]
   }
 };
 
