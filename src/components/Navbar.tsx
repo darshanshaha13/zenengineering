@@ -78,7 +78,7 @@ const Navbar: React.FC = () => {
 
           <div className="flex flex-col">
             <span className="text-lg md:text-xl font-bold tracking-wider text-white leading-none drop-shadow">
-              ZEN ENGINEERING SOLUTIONS
+              XXX ENGINEERING SOLUTIONS
             </span>
 
             {/* Tagline */}
