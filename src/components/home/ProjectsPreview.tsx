@@ -4,52 +4,18 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { ArrowRight } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
+import { projects, ProjectSummary } from "@/data/projects";
 
 // --- Configuration Constants ---
 const ACCENT_COLOR_CLASS = "text-blue-400";
 
 // --- Data Definition ---
-interface FeaturedProject {
-  id: number;
-  title: string;
-  category: string;
-  location: string;
-  image: string;
-  description: string;
-}
+type FeaturedProject = Pick<
+  ProjectSummary,
+  "id" | "title" | "category" | "location" | "image" | "description"
+>;
 
-const featuredProjects: FeaturedProject[] = [
-  {
-    id: 1,
-    title: "Commercial Office Complex",
-    category: "Acoustic & HVAC",
-    location: "Pune, Maharashtra",
-    image:
-      "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&q=80",
-    description:
-      "Complete acoustic treatment and climate control for 50,000 sq ft office space.",
-  },
-  {
-    id: 2,
-    title: "Educational Institution",
-    category: "Insulation & HVAC",
-    location: "Kolhapur, Maharashtra",
-    image:
-      "https://images.unsplash.com/photo-1562774053-701939374585?w=1200&q=80",
-    description:
-      "Advanced insulation and HVAC systems for multiple buildings spanning 100,000 sq ft.",
-  },
-  {
-    id: 3,
-    title: "Manufacturing Facility",
-    category: "Climate Control",
-    location: "Sangli, Maharashtra",
-    image:
-      "https://images.unsplash.com/photo-1581092160562-40aa08e78837?w=1200&q=80",
-    description:
-      "Industrial-grade climate control and acoustic solutions for production environments.",
-  },
-];
+const featuredProjects: FeaturedProject[] = projects.slice(0, 3);
 
 // --- Utility Hook: Scroll observer for animation ---
 function useInView(options?: IntersectionObserverInit) {
