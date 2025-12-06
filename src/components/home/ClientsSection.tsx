@@ -5,55 +5,55 @@ import { motion } from "framer-motion";
 const clients = [
   {
     name: "Shubham Builders",
-    logo: "/Shubham-Builders-Pune-Logo.png",
+    logo: "/logos/Shubham-Builders-Pune-Logo.png",
   },
   {
     name: "Chitale Dairy",
-    logo: "/Chitale-Dairy-Logo.png",
+    logo: "/logos/Chitale-Dairy-Logo.png",
   },
   {
     name: "Panchshil Builders",
-    logo: "/Panchshil-Builders-Logo.png",
+    logo: "/logos/Panchshil-Builders-Logo.png",
   },
   {
     name: "Bharati Vidyapeeth",
-    logo: "/Bharati-Vidhyapeeth-Logo-300x71.png",
+    logo: "/logos/Bharati-Vidhyapeeth-Logo-300x71.png",
   },
   {
     name: "MES - Military Engineering Services",
-    logo: "/mes-logo.png",
+    logo: "/logos/mes-logo.png",
   },
   {
     name: "CSIBER Kolhapur",
-    logo: "/CSIBER-Kolhapur-India-logo.png",
+    logo: "/logos/CSIBER-Kolhapur-India-logo.png",
   },
   {
     name: "Eleganz Interiors",
-    logo: "/Eleganz-Interior-Ltd-Logo.png",
+    logo: "/logos/Eleganz-Interior-Ltd-Logo.png",
   },
   {
     name: "LES",
-    logo: "/LES-logo.png",
+    logo: "/logos/LES-logo.png",
   },
   {
     name: "Hyundai",
-    logo: "/hyundai.png",
+    logo: "/logos/hyundai.png",
   },
   {
     name: "Patankar Kale Constructions Pvt. Ltd.",
-    logo: "/patankar-kale.png",
+    logo: "/logos/patankar-kale.png",
   },
   {
     name: "Studio 888",
-    logo: "/studio-888.png",
+    logo: "/logos/studio-888.png",
   },
   {
     name: "Architect Prakash Jadhav",
-    logo: "/prakash-jadhav.png",
+    logo: "/logos/prakash-jadhav.png",
   },
   {
     name: "Parikh Group",
-    logo: "/parikh-logo.png",
+    logo: "/logos/parikh-logo.png",
   },
 ];
 
