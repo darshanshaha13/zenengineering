@@ -458,11 +458,11 @@ const About = () => {
                   className={`absolute top-4 left-4 w-full h-full border-2 ${BORDER_DARK} rounded-2xl -z-10`}
                 ></div>
 
-                <img
-                  src="/services.jpg"
-                  alt="Zen Engineering project execution"
-                  className="rounded-2xl shadow-2xl relative grayscale-[20%] hover:grayscale-0 transition-all duration-500"
-                />
+                  <img
+                    src="/about-us-story.png"
+                    alt="Zen Engineering project execution"
+                    className="rounded-2xl shadow-2xl relative grayscale-[20%] hover:grayscale-0 transition-all duration-500"
+                  />
               </div>
             </div>
           </div>
