@@ -41,7 +41,7 @@ const Footer = () => {
           <div className="lg:col-span-4 space-y-6">
             <Link to="/" className="flex items-center gap-3 group w-fit">
               <img
-                src="/zen-logo.png"
+                src="/zen-logo.webp"
                 alt="Zen Engineering"
                 className="h-12 w-12 md:h-14 md:w-14 object-contain rounded-xl drop-shadow-[0_0_18px_rgba(59,130,246,0.45)]"
               />

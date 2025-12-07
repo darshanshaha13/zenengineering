@@ -25,13 +25,13 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "Ayurvedic Medical College",
     duration: "Turnkey execution",
-    heroImage: "/projects/01/01-ACB-01.jpg",
+    heroImage: "/projects/01/01-ACB-01.webp",
     images: [
-      "/projects/01/01-ACB-01.jpg",
-      "/projects/01/01-ACB-02.jpg",
-      "/projects/01/01-ACB-03.jpg",
-      "/projects/01/01-ACB-04.jpg",
-      "/projects/01/01-ACB-05.jpg"
+      "/projects/01/01-ACB-01.webp",
+      "/projects/01/01-ACB-02.webp",
+      "/projects/01/01-ACB-03.webp",
+      "/projects/01/01-ACB-04.webp",
+      "/projects/01/01-ACB-05.webp"
     ],
     description: "350-seater auditorium outfitted with Anutone Slat Surco Lite, Stretch Hush, Rosetta carpet, and Polywool for balanced absorption and premium finishes.",
     challenge: "Deliver even reverberation control and speech clarity across a 350-seat hall while integrating multiple acoustic materials into a cohesive visual language.",
@@ -56,14 +56,14 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "Southern Star Auditorium",
     duration: "Turnkey execution",
-    heroImage: "/projects/02/02-01.jpg",
+    heroImage: "/projects/02/02-01.webp",
     images: [
-      "/projects/02/02-01.jpg",
-      "/projects/02/02-02.jpg",
-      "/projects/02/02-03.jpg",
-      "/projects/02/02-04.jpg",
-      "/projects/02/02-05.jpg",
-      "/projects/02/02-06.jpg"
+      "/projects/02/02-01.webp",
+      "/projects/02/02-02.webp",
+      "/projects/02/02-03.webp",
+      "/projects/02/02-04.webp",
+      "/projects/02/02-05.webp",
+      "/projects/02/02-06.webp"
     ],
     description: "600-seater auditorium featuring Anutone Slat Surco Lite, Hush Panel, Matt Ebony, Ebony, Sisoli Serene, and Astral lay-in metal ceilings for immersive sound and premium aesthetics.",
     challenge: "Achieve uniform absorption and diffusion across a large 600-seat auditorium while blending multiple Anutone finishes with metal ceiling elements.",
@@ -88,12 +88,12 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "KIMS-UAIMS Hospital",
     duration: "Turnkey execution",
-    heroImage: "/projects/03/03-01.jpg",
+    heroImage: "/projects/03/03-01.webp",
     images: [
-      "/projects/03/03-01.jpg",
-      "/projects/03/03-02.jpg",
-      "/projects/03/03-03.jpg",
-      "/projects/03/03-04.jpg"
+      "/projects/03/03-01.webp",
+      "/projects/03/03-02.webp",
+      "/projects/03/03-03.webp",
+      "/projects/03/03-04.webp"
     ],
     description: "Custom 30mm PET acoustic baffle ceiling designed to manage reverberation in critical healthcare areas at KIMS-UAIMS Hospital.",
     challenge: "Reduce echo in large hospital volumes without obstructing services or lighting while maintaining hygienic, easy-to-clean surfaces.",
@@ -118,14 +118,14 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "CSIBER College",
     duration: "Turnkey execution",
-    heroImage: "/projects/04/Cyber%2002.jpg",
+    heroImage: "/projects/04/Cyber%2002.webp",
     images: [
-      "/projects/04/Cyber%2002.jpg",
-      "/projects/04/Cyber%2003.jpg",
-      "/projects/04/Cyber%2006.jpg",
-      "/projects/04/Cyber%2010.jpg",
-      "/projects/04/Cyber%2011.jpg",
-      "/projects/04/Cyber%2024.jpg"
+      "/projects/04/Cyber%2002.webp",
+      "/projects/04/Cyber%2003.webp",
+      "/projects/04/Cyber%2006.webp",
+      "/projects/04/Cyber%2010.webp",
+      "/projects/04/Cyber%2011.webp",
+      "/projects/04/Cyber%2024.webp"
     ],
     description: "950-seater Anand Bhavan auditorium outfitted with Anutone Strand Board, Polywool infill, and 10mm PET panels to deliver balanced acoustics and premium finishes across walls and ceilings.",
     challenge: "Create a coherent acoustic envelope for a large 950-seat hall while integrating multiple material systems across walls, grid ceilings, and gypsum ceilings without compromising aesthetics.",
@@ -150,17 +150,17 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "National Institute of Naturopathy",
     duration: "Turnkey execution",
-    heroImage: "/projects/05/IMG_6765%20copy.jpg",
+    heroImage: "/projects/05/IMG_6765%20copy.webp",
     images: [
-      "/projects/05/IMG_6765%20copy.jpg",
-      "/projects/05/IMG_6773%20copy.jpg",
-      "/projects/05/IMG_6775%20copy.jpg",
-      "/projects/05/IMG_6777%20copy.jpg",
-      "/projects/05/IMG_6779%20copy.jpg",
-      "/projects/05/IMG_6789%20copy.jpg",
-      "/projects/05/IMG_6799%20copy.jpg",
-      "/projects/05/IMG_6809%20copy.jpg",
-      "/projects/05/IMG_6810%20copy.jpg"
+      "/projects/05/IMG_6765%20copy.webp",
+      "/projects/05/IMG_6773%20copy.webp",
+      "/projects/05/IMG_6775%20copy.webp",
+      "/projects/05/IMG_6777%20copy.webp",
+      "/projects/05/IMG_6779%20copy.webp",
+      "/projects/05/IMG_6789%20copy.webp",
+      "/projects/05/IMG_6799%20copy.webp",
+      "/projects/05/IMG_6809%20copy.webp",
+      "/projects/05/IMG_6810%20copy.webp"
     ],
     description: "400-seater auditorium outfitted with Anutone Slat Surco Lite, Hush Panel, Nubby, and SynthPF to achieve balanced absorption across walls and ceilings with premium finishes.",
     challenge: "Deliver clear speech intelligibility and controlled reverberation in a 400-seat hall while integrating multiple acoustic systems across wall panelling, grid ceilings, and gypsum ceilings.",
@@ -185,14 +185,14 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "MALPANI GROUP",
     duration: "Turnkey execution",
-    heroImage: "/projects/06/IMG-20240913-WA0006.jpg",
+    heroImage: "/projects/06/IMG-20240913-WA0006.webp",
     images: [
-      "/projects/06/IMG-20240913-WA0006.jpg",
-      "/projects/06/IMG-20240913-WA0007.jpg",
-      "/projects/06/IMG-20240913-WA0008.jpg",
-      "/projects/06/IMG-20240913-WA0009.jpg",
-      "/projects/06/IMG-20240913-WA0010.jpg",
-      "/projects/06/IMG-20240913-WA0011.jpg"
+      "/projects/06/IMG-20240913-WA0006.webp",
+      "/projects/06/IMG-20240913-WA0007.webp",
+      "/projects/06/IMG-20240913-WA0008.webp",
+      "/projects/06/IMG-20240913-WA0009.webp",
+      "/projects/06/IMG-20240913-WA0010.webp",
+      "/projects/06/IMG-20240913-WA0011.webp"
     ],
     description: "Acoustic wall panelling for conference and training rooms using the Anutone Stretch System to deliver clean aesthetics and focused sound control.",
     challenge: "Control reflections and improve intelligibility in multi-purpose rooms while maintaining a sleek corporate finish.",
@@ -217,12 +217,12 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "GPMT Institute",
     duration: "Turnkey execution",
-    heroImage: "/projects/07/IMG-20240308-WA0109.jpg",
+    heroImage: "/projects/07/IMG-20240308-WA0109.webp",
     images: [
-      "/projects/07/IMG-20240308-WA0109.jpg",
-      "/projects/07/IMG-20240308-WA0110.jpg",
-      "/projects/07/IMG-20240308-WA0111.jpg",
-      "/projects/07/IMG-20240308-WA0112.jpg"
+      "/projects/07/IMG-20240308-WA0109.webp",
+      "/projects/07/IMG-20240308-WA0110.webp",
+      "/projects/07/IMG-20240308-WA0111.webp",
+      "/projects/07/IMG-20240308-WA0112.webp"
     ],
     description: "Custom 30mm PET acoustic clouds installed throughout the canteen area to tame noise and improve comfort for students and staff.",
     challenge: "Reduce reverberation and chatter in an open canteen while keeping the ceiling visually light and easy to maintain.",
@@ -247,10 +247,10 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "Workday",
     duration: "Turnkey execution",
-    heroImage: "/projects/08/WORK%20DAY%201.jpg",
+    heroImage: "/projects/08/WORK%20DAY%201.webp",
     images: [
-      "/projects/08/WORK%20DAY%201.jpg",
-      "/projects/08/WORKDAT.jpg"
+      "/projects/08/WORK%20DAY%201.webp",
+      "/projects/08/WORKDAT.webp"
     ],
     description: "Acoustic ceiling installation using 25mm Anutone Strand Melange Fila bevel edge panels to create a calm, intelligible workspace.",
     challenge: "Reduce ceiling reflections and ambient noise in open office areas without compromising the modern aesthetic.",
@@ -275,14 +275,14 @@ const projectData: Record<string, any> = {
     year: "2024",
     client: "Shivaji University",
     duration: "Turnkey execution",
-    heroImage: "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.32%20AM%20(2).jpeg",
+    heroImage: "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.32%20AM%20(2).webp",
     images: [
-      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.32%20AM%20(2).jpeg",
-      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM%20(1).jpeg",
-      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM%20(2).jpeg",
-      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM.jpeg",
-      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.34%20AM%20(1).jpeg",
-      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.34%20AM.jpeg"
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.32%20AM%20(2).webp",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM%20(1).webp",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM%20(2).webp",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM.webp",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.34%20AM%20(1).webp",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.34%20AM.webp"
     ],
     description: "80-seater Mathematics Department auditorium treated with Anutone Slat Surco Lite and 10mm PET panels to achieve balanced acoustics and a refined finish.",
     challenge: "Deliver clear speech and controlled reverberation in a compact 80-seat hall while keeping a clean academic aesthetic.",
@@ -559,3 +559,4 @@ const ProjectDetail = () => {
 };
 
 export default ProjectDetail;
+

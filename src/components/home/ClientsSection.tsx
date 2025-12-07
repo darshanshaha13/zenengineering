@@ -5,55 +5,55 @@ import { motion } from "framer-motion";
 const clients = [
   {
     name: "Shubham Builders",
-    logo: "/logos/Shubham-Builders-Pune-Logo.png",
+    logo: "/logos/Shubham-Builders-Pune-Logo.webp",
   },
   {
     name: "Chitale Dairy",
-    logo: "/logos/Chitale-Dairy-Logo.png",
+    logo: "/logos/Chitale-Dairy-Logo.webp",
   },
   {
     name: "Panchshil Builders",
-    logo: "/logos/Panchshil-Builders-Logo.png",
+    logo: "/logos/Panchshil-Builders-Logo.webp",
   },
   {
     name: "Bharati Vidyapeeth",
-    logo: "/logos/Bharati-Vidhyapeeth-Logo-300x71.png",
+    logo: "/logos/Bharati-Vidhyapeeth-Logo-300x71.webp",
   },
   {
     name: "MES - Military Engineering Services",
-    logo: "/logos/mes-logo.png",
+    logo: "/logos/mes-logo.webp",
   },
   {
     name: "CSIBER Kolhapur",
-    logo: "/logos/CSIBER-Kolhapur-India-logo.png",
+    logo: "/logos/CSIBER-Kolhapur-India-logo.webp",
   },
   {
     name: "Eleganz Interiors",
-    logo: "/logos/Eleganz-Interior-Ltd-Logo.png",
+    logo: "/logos/Eleganz-Interior-Ltd-Logo.webp",
   },
   {
     name: "LES",
-    logo: "/logos/LES-logo.png",
+    logo: "/logos/LES-logo.webp",
   },
   {
     name: "Hyundai",
-    logo: "/logos/hyundai.png",
+    logo: "/logos/hyundai.webp",
   },
   {
     name: "Patankar Kale Constructions Pvt. Ltd.",
-    logo: "/logos/patankar-kale.png",
+    logo: "/logos/patankar-kale.webp",
   },
   {
     name: "Studio 888",
-    logo: "/logos/studio-888.png",
+    logo: "/logos/studio-888.webp",
   },
   {
     name: "Architect Prakash Jadhav",
-    logo: "/logos/prakash-jadhav.png",
+    logo: "/logos/prakash-jadhav.webp",
   },
   {
     name: "Parikh Group",
-    logo: "/logos/parikh-logo.png",
+    logo: "/logos/parikh-logo.webp",
   },
 ];
 
@@ -182,3 +182,4 @@ const ClientsSection = () => {
 };
 
 export default ClientsSection;
+

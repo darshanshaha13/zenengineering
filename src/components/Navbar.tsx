@@ -62,7 +62,7 @@ const Navbar: React.FC = () => {
           "
         >
           <img
-            src="/zen-logo.png"
+            src="/zen-logo.webp"
             alt="Zen Engineering"
             className="
               h-full w-full

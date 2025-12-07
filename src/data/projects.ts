@@ -18,7 +18,7 @@ export const projects: ProjectSummary[] = [
     location: "Baramati, Maharashtra",
     area: "350-seater auditorium",
     year: "2024",
-    image: "/projects/01/01-ACB-01.jpg",
+    image: "/projects/01/01-ACB-01.webp",
     description:
       "350-seater Ayurvedic Medical College auditorium finished with Anutone Slat Surco Lite, Stretch Hush, Rosetta carpet, and Polywool acoustic treatments.",
     tags: ["Auditorium", "Acoustic", "Carpet"],
@@ -30,7 +30,7 @@ export const projects: ProjectSummary[] = [
     location: "Pune, Maharashtra",
     area: "600-seater auditorium",
     year: "2024",
-    image: "/projects/02/02-01.jpg",
+    image: "/projects/02/02-01.webp",
     description:
       "600-seater Southern Star Auditorium with Anutone Slat Surco Lite, Hush Panel, Matt Ebony, Ebony, Sisoli Serene, and Astral Lay-in metal ceiling finishes.",
     tags: ["Auditorium", "Acoustic", "Metal Ceiling"],
@@ -42,7 +42,7 @@ export const projects: ProjectSummary[] = [
     location: "Sangli, Maharashtra",
     area: "Acoustic baffle ceiling",
     year: "2024",
-    image: "/projects/03/03-01.jpg",
+    image: "/projects/03/03-01.webp",
     description:
       "Custom 30mm PET acoustic baffle ceiling for KIMS-UAIMS Hospital, Sangli, delivering controlled reverberation in clinical spaces.",
     tags: ["Healthcare", "Acoustic Ceiling", "Baffles"],
@@ -54,7 +54,7 @@ export const projects: ProjectSummary[] = [
     location: "Kolhapur, Maharashtra",
     area: "950-seater auditorium",
     year: "2024",
-    image: "/projects/04/Cyber%2002.jpg",
+    image: "/projects/04/Cyber%2002.webp",
     description:
       "950-seater Anand Bhavan auditorium finished with Anutone Strand Board, Polywool infill, and 10mm PET panels across acoustic wall paneling, acoustic grid ceiling, and gypsum ceiling scopes.",
     tags: [
@@ -72,7 +72,7 @@ export const projects: ProjectSummary[] = [
     location: "Pune, Maharashtra",
     area: "400-seater auditorium",
     year: "2024",
-    image: "/projects/05/IMG_6765%20copy.jpg",
+    image: "/projects/05/IMG_6765%20copy.webp",
     description:
       "400-seater National Institute of Naturopathy auditorium executed with Anutone Slat Surco Lite, Hush Panel, Nubby, and SynthPF across acoustic wall panelling, grid ceiling, and gypsum ceiling scopes.",
     tags: ["Auditorium", "Acoustic", "Grid Ceiling", "Gypsum Ceiling", "Anutone"],
@@ -84,7 +84,7 @@ export const projects: ProjectSummary[] = [
     location: "Chakan, Pune",
     area: "Conference & Training Rooms",
     year: "2024",
-    image: "/projects/06/IMG-20240913-WA0006.jpg",
+    image: "/projects/06/IMG-20240913-WA0006.webp",
     description:
       "Acoustic wall panelling for the conference and training rooms using the Anutone Stretch System to deliver premium sound control and a sleek finish.",
     tags: ["Acoustic", "Stretch System", "Conference Room", "Training Room", "Anutone"],
@@ -96,7 +96,7 @@ export const projects: ProjectSummary[] = [
     location: "Miraj, Maharashtra",
     area: "Canteen area",
     year: "2024",
-    image: "/projects/07/IMG-20240308-WA0109.jpg",
+    image: "/projects/07/IMG-20240308-WA0109.webp",
     description:
       "Custom 30mm PET acoustic clouds installed across the canteen area to control noise and improve comfort for students and staff.",
     tags: ["Acoustic", "Cloud Ceiling", "PET Panel", "Canteen"],
@@ -108,7 +108,7 @@ export const projects: ProjectSummary[] = [
     location: "Pune, Maharashtra",
     area: "Office spaces",
     year: "2024",
-    image: "/projects/08/WORK%20DAY%201.jpg",
+    image: "/projects/08/WORK%20DAY%201.webp",
     description:
       "Acoustic ceiling installation using 25mm Anutone Strand Melange Fila bevel edge panels to elevate comfort and clarity in the workspace.",
     tags: ["Acoustic", "Ceiling", "Anutone", "Office"],
@@ -120,9 +120,10 @@ export const projects: ProjectSummary[] = [
     location: "Kolhapur, Maharashtra",
     area: "80-seater auditorium",
     year: "2024",
-    image: "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.32%20AM%20(2).jpeg",
+    image: "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.32%20AM%20(2).webp",
     description:
       "80-seater Mathematics Department auditorium treated with Anutone Slat Surco Lite and 10mm PET panels for balanced acoustics and a refined finish.",
     tags: ["Auditorium", "Acoustic", "PET Panel", "Anutone"],
   },
 ];
+

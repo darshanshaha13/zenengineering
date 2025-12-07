@@ -89,21 +89,21 @@ const managingPartners = [
   {
     name: "Darshan Shah",
     designation: "Managing Partner - Sales & Marketing",
-    image: "/logos/darshan-shah.png",
+    image: "/logos/darshan-shah.webp",
     bio: "Leads sales and marketing with a focus on client relationships and growth across Maharashtra.",
     linkedin: "https://www.linkedin.com/in/darshan-shah",
   },
   {
     name: "Shrikrishna Ganthade",
     designation: "Managing Partner - Projects",
-    image: "/krishna.jpg",
+    image: "/krishna.webp",
     bio: "Oversees project execution and delivery, ensuring quality workmanship and on-time handovers.",
     linkedin: "#",
   },
   {
     name: "Akshay Gajre",
     designation: "Managing Partner - Services",
-    image: "/darshan-shah.png",
+    image: "/darshan-shah.webp",
     bio: "Heads services and support to maintain system reliability and responsive customer care.",
     linkedin: "#",
   },
@@ -113,7 +113,7 @@ const coreTeam = [
   {
     name: "Saif Mulani",
     designation: "Project Head - Pune",
-    image: "/saif.png",
+    image: "/saif.webp",
   },
   {
     name: "Akash Bhosale",
@@ -158,7 +158,7 @@ const About = () => {
         title="About Us | Zen Engineering Solutions"
         description="Zen Engineering Solutions delivers premium HVAC, acoustic, thermal, Air Cooler and ceiling solutions across Maharashtra with HQ in Sangli and branches in Kolhapur & Pune."
         canonicalPath="/about"
-        image="/about.png"
+        image="/about.webp"
         structuredData={[
           {
             "@context": "https://schema.org",
@@ -167,7 +167,7 @@ const About = () => {
             description:
               "Learn about Zen Engineering Solutions and our HVAC, acoustic, thermal insulation, ceiling, and air cooler expertise across Maharashtra.",
             url: buildAbsoluteUrl("/about"),
-            primaryImageOfPage: buildAbsoluteUrl("/about.png"),
+            primaryImageOfPage: buildAbsoluteUrl("/about.webp"),
           },
           { ...organizationSchema, "@id": `${siteMeta.siteUrl}#organization` },
         ]}
@@ -184,7 +184,7 @@ const About = () => {
           {/* --- LAYER 1: Background Image & Texture --- */}
           <div className="absolute inset-0 z-0 pointer-events-none">
             <img
-              src="/about.png"
+              src="/about.webp"
               alt="Team working in an office"
               className="w-full h-full object-cover opacity-25"
             />
@@ -459,7 +459,7 @@ const About = () => {
                 ></div>
 
                   <img
-                    src="/about-us-story.png"
+                    src="/about-us-story.webp"
                     alt="Zen Engineering project execution"
                     className="rounded-2xl shadow-2xl relative grayscale-[20%] hover:grayscale-0 transition-all duration-500"
                   />
@@ -872,3 +872,4 @@ const About = () => {
 };
 
 export default About;
+

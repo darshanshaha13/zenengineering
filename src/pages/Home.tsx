@@ -18,7 +18,7 @@ const Home = () => {
         title="Zen Engineering Solutions | Acoustic & HVAC Experts"
         description="Zen Engineering Solutions delivers premium HVAC, acoustic, and insulation services across Maharashtra with authorised Daikin, Anutone Acoustic, and Symphony partnerships."
         canonicalPath="/"
-        image="/hero-image.jpg"
+        image="/hero-image.webp"
         structuredData={[
           { ...organizationSchema, "@id": `${siteMeta.siteUrl}#organization` },
           { ...websiteSchema, "@id": `${siteMeta.siteUrl}#website` },
@@ -39,3 +39,4 @@ const Home = () => {
 };
 
 export default Home;
+

@@ -108,7 +108,7 @@ All colors MUST be HSL.
 }
 
 .services-bg {
-  background-image: url('/services.jpg');
+  background-image: url('/services.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -197,3 +197,4 @@ All colors MUST be HSL.
     transform: scale(1);
   }
 }
+

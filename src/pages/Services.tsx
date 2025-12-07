@@ -194,7 +194,7 @@ const Services = () => {
         title="Services | Zen Engineering Solutions"
         description="Explore HVAC, acoustic, thermal, Air Cooler and ceiling solutions delivered by Zen Engineering Solutions across Maharashtra."
         canonicalPath="/services"
-        image="/services.jpg"
+        image="/services.webp"
         structuredData={[
           {
             "@context": "https://schema.org",

@@ -6,15 +6,15 @@ import { Link } from "react-router-dom";
 const channelPartners = [
   {
     name: "Daikin",
-    logoSrc: "/logos/daikin-logo.png",
+    logoSrc: "/logos/daikin-logo.webp",
   },
   {
     name: "Anutone",
-    logoSrc: "/logos/anutone-logo.png",
+    logoSrc: "/logos/anutone-logo.webp",
   },
   {
     name: "Symphony",
-    logoSrc: "/logos/symphony-logo.png",
+    logoSrc: "/logos/symphony-logo.webp",
   },
 ];
 
@@ -24,7 +24,7 @@ const Hero = () => {
       {/* --- LAYER 1: Background Image & Texture --- */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/hero-image.jpg"
+          src="/hero-image.webp"
           alt="Modern engineering workspace"
           className="w-full h-full object-cover opacity-50"
         />

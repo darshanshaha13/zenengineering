@@ -10,8 +10,8 @@ export const siteMeta = {
     "Zen Engineering Solutions delivers premium HVAC, acoustic, thermal insulation, ceiling, and air cooler systems across Maharashtra with authorised Daikin, Anutone, and Symphony partnerships.",
   siteUrl: baseSiteUrl,
   locale: "en_IN",
-  logo: "/zen-logo.png",
-  defaultImage: "/zen-logo.png",
+  logo: "/zen-logo.webp",
+  defaultImage: "/zen-logo.webp",
   sameAs: [
     "https://www.instagram.com/zen_engineerings/",
     "https://www.linkedin.com/company/zen-engineering-solutions/",

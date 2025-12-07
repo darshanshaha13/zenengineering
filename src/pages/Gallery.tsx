@@ -14,18 +14,18 @@ const BORDER_DARK = "border-white/10";
 const ACCENT_COLOR_CLASS = "text-blue-400"; 
 const GLASS_CARD_BASE = `border ${BORDER_DARK} bg-white/[0.04] backdrop-blur-lg`;
 const GALLERY_IMAGES = [
-  { id: "01", url: "/gallery/01.jpg", title: "Project 01" },
-  { id: "02", url: "/gallery/02.jpg", title: "Project 02" },
-  { id: "03", url: "/gallery/03.jpg", title: "Project 03" },
-  { id: "04", url: "/gallery/04.jpg", title: "Project 04" },
-  { id: "05", url: "/gallery/05.jpg", title: "Project 05" },
-  { id: "06", url: "/gallery/06.jpg", title: "Project 06" },
-  { id: "07", url: "/gallery/07.jpg", title: "Project 07" },
-  { id: "08", url: "/gallery/08.jpg", title: "Project 08" },
-  { id: "09", url: "/gallery/09.jpeg", title: "Project 09" },
-  { id: "10", url: "/gallery/10.jpeg", title: "Project 10" },
-  { id: "11", url: "/gallery/11.jpg", title: "Project 11" },
-  { id: "12", url: "/gallery/12.jpeg", title: "Project 12" },
+  { id: "01", url: "/gallery/01.webp", title: "Project 01" },
+  { id: "02", url: "/gallery/02.webp", title: "Project 02" },
+  { id: "03", url: "/gallery/03.webp", title: "Project 03" },
+  { id: "04", url: "/gallery/04.webp", title: "Project 04" },
+  { id: "05", url: "/gallery/05.webp", title: "Project 05" },
+  { id: "06", url: "/gallery/06.webp", title: "Project 06" },
+  { id: "07", url: "/gallery/07.webp", title: "Project 07" },
+  { id: "08", url: "/gallery/08.webp", title: "Project 08" },
+  { id: "09", url: "/gallery/09.webp", title: "Project 09" },
+  { id: "10", url: "/gallery/10.webp", title: "Project 10" },
+  { id: "11", url: "/gallery/11.webp", title: "Project 11" },
+  { id: "12", url: "/gallery/12.webp", title: "Project 12" },
 ];
 
 const Gallery = () => {
@@ -130,3 +130,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+
