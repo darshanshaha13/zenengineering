@@ -26,6 +26,22 @@ const GALLERY_IMAGES = [
   { id: "10", url: "/gallery/10.webp", title: "Project 10" },
   { id: "11", url: "/gallery/11.webp", title: "Project 11" },
   { id: "12", url: "/gallery/12.webp", title: "Project 12" },
+  { id: "13", url: "/gallery/13.webp", title: "Project 13" },
+  { id: "14", url: "/gallery/14.webp", title: "Project 14" },
+  { id: "15", url: "/gallery/15.webp", title: "Project 15" },
+  { id: "16", url: "/gallery/16.webp", title: "Project 16" },
+  { id: "17", url: "/gallery/17.webp", title: "Project 17" },
+  { id: "18", url: "/gallery/18.webp", title: "Project 18" },
+  { id: "19", url: "/gallery/19.webp", title: "Project 19" },
+  { id: "20", url: "/gallery/20.webp", title: "Project 20" },
+  { id: "21", url: "/gallery/21.webp", title: "Project 21" },
+  { id: "22", url: "/gallery/22.webp", title: "Project 22" },
+  { id: "23", url: "/gallery/23.webp", title: "Project 23" },
+  { id: "24", url: "/gallery/24.webp", title: "Project 24" },
+  { id: "25", url: "/gallery/25.webp", title: "Project 25" },
+  { id: "26", url: "/gallery/26.webp", title: "Project 26" },
+  { id: "27", url: "/gallery/27.webp", title: "Project 27" },
+  { id: "28", url: "/gallery/28.webp", title: "Project 28" },
 ];
 
 const Gallery = () => {

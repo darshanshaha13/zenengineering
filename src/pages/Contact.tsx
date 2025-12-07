@@ -255,11 +255,24 @@ const Contact = () => {
 
                 {/* Optional: Embed Map Placeholder */}
                 <div className={`h-72 w-full rounded-xl mt-8 overflow-hidden border ${BORDER_DARK} shadow-2xl shadow-black/50`}>
-                    <img 
-                      src="https://via.placeholder.com/600x400.png?text=Map+Embed+Placeholder" 
-                      alt="Map Location Placeholder" 
-                      className="w-full h-full object-cover opacity-80"
-                    />
+                  <iframe
+                    title="Sangli Headquarters Map"
+                    src="https://www.openstreetmap.org/export/embed.html?bbox=74.5618%2C16.8592%2C74.5818%2C16.8792&layer=mapnik&marker=16.8692%2C74.5718"
+                    className="w-full h-full"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+                <div className="mt-3 text-sm text-slate-300">
+                  <a
+                    href="https://www.openstreetmap.org/?mlat=16.8692&mlon=74.5718#map=16/16.8692/74.5718"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="text-blue-300 hover:text-blue-200"
+                  >
+                    View on map
+                  </a>
                 </div>
 
                 <p className="text-slate-300 mt-6">
@@ -270,6 +283,22 @@ const Contact = () => {
           </div>
         </section>
       </main>
+
+      {/* Floating WhatsApp Widget */}
+      <a
+        href="https://wa.me/919610029008"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Chat with us on WhatsApp"
+        className="fixed bottom-5 right-5 z-50 group"
+      >
+        <div className="flex items-center gap-3 rounded-full bg-green-500 text-white px-4 py-2 shadow-xl shadow-green-500/30 hover:shadow-green-400/40 transition-all duration-300">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-white/20 group-hover:bg-white/30 transition-colors">
+            <MessageSquare className="h-5 w-5" />
+          </div>
+          <div className="text-sm font-semibold pr-1">WhatsApp</div>
+        </div>
+      </a>
       <Footer />
     </div>
   );

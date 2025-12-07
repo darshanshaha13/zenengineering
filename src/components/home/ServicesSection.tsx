@@ -77,9 +77,6 @@ const textureClassMap: Record<TextureVariant, string> = {
 // --- 2. 3D MODEL COLUMN (LEFT) ---
 
 const AcousticPanelModel = () => {
-  const SKETCHFAB_URL =
-    "https://sketchfab.com/models/9a014892b901438c8fb66cc0fa689264/embed?autospin=0.2&autostart=1&dnt=1&preload=1&ui_theme=dark";
-
   return (
     <div className="w-full h-full">
       <div
@@ -101,13 +98,13 @@ const AcousticPanelModel = () => {
         {/* subtle inner glow ring */}
         <div className="pointer-events-none absolute -inset-16 bg-radial from-blue-500/15 via-transparent to-transparent opacity-60" />
 
-        <iframe
-          title="Air Handling Unit (AHU) 3D Model"
-          frameBorder="0"
-          allowFullScreen
-          allow="autoplay; fullscreen; xr-spatial-tracking"
-          src={SKETCHFAB_URL}
-          className="relative z-10 w-full h-full rounded-3xl"
+        <video
+          className="relative z-10 w-full h-full rounded-3xl object-cover"
+          src="/home-video.mp4"
+          autoPlay
+          loop
+          muted
+          playsInline
         />
       </div>
     </div>
