@@ -247,7 +247,7 @@ const Contact = () => {
                       <Clock className={`h-6 w-6 ${ACCENT_COLOR_CLASS} flex-shrink-0 mt-1`} />
                       <div>
                         <h4 className={`font-semibold mb-1 ${TEXT_LIGHT}`}>Business Hours</h4>
-                        <p className={TEXT_MUTED_DARK}>Mon - Sat: 9:00 AM - 6:00 PM<br />Sunday: Closed</p>
+                        <p className={TEXT_MUTED_DARK}>Mon - Sat: 10:00 AM - 6:00 PM<br />Sunday: Closed</p>
                       </div>
                     </div>
                   </CardContent>
