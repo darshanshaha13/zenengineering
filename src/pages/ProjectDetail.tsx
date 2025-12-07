@@ -109,6 +109,195 @@ const projectData: Record<string, any> = {
       { label: "Application", value: "Healthcare circulation and common areas" }
     ],
     tags: ["Healthcare", "Acoustic Ceiling", "Baffles"]
+  },
+  "4": {
+    title: "Anand Bhavan Auditorium, CSIBER College Kolhapur",
+    category: "Auditorium Acoustics",
+    location: "Kolhapur, Maharashtra",
+    area: "950-seater auditorium",
+    year: "2024",
+    client: "CSIBER College",
+    duration: "Turnkey execution",
+    heroImage: "/projects/04/Cyber%2002.jpg",
+    images: [
+      "/projects/04/Cyber%2002.jpg",
+      "/projects/04/Cyber%2003.jpg",
+      "/projects/04/Cyber%2006.jpg",
+      "/projects/04/Cyber%2010.jpg",
+      "/projects/04/Cyber%2011.jpg",
+      "/projects/04/Cyber%2024.jpg"
+    ],
+    description: "950-seater Anand Bhavan auditorium outfitted with Anutone Strand Board, Polywool infill, and 10mm PET panels to deliver balanced acoustics and premium finishes across walls and ceilings.",
+    challenge: "Create a coherent acoustic envelope for a large 950-seat hall while integrating multiple material systems across walls, grid ceilings, and gypsum ceilings without compromising aesthetics.",
+    solution: "Installed Anutone Strand Board with Polywool backing on walls, combined acoustic grid ceilings, and coordinated gypsum ceilings to control reverberation and maintain a clean visual language.",
+    results: [
+      "Improved speech clarity and controlled reverberation throughout the 950-seat bowl",
+      "Layered wall and ceiling treatments that align with the auditorium’s architecture",
+      "Durable acoustic system designed for high occupancy institutional use"
+    ],
+    specifications: [
+      { label: "Capacity", value: "950 seats" },
+      { label: "Products Used", value: "Anutone Strand Board, Polywool, 10mm PET panel" },
+      { label: "Scope", value: "Acoustic wall panelling, acoustic grid ceiling, gypsum ceiling" }
+    ],
+    tags: ["Auditorium", "Acoustic", "Grid Ceiling", "Gypsum Ceiling", "Anutone"]
+  },
+  "5": {
+    title: "National Institute of Naturopathy, Pune",
+    category: "Auditorium Acoustics",
+    location: "Pune, Maharashtra",
+    area: "400-seater auditorium",
+    year: "2024",
+    client: "National Institute of Naturopathy",
+    duration: "Turnkey execution",
+    heroImage: "/projects/05/IMG_6765%20copy.jpg",
+    images: [
+      "/projects/05/IMG_6765%20copy.jpg",
+      "/projects/05/IMG_6773%20copy.jpg",
+      "/projects/05/IMG_6775%20copy.jpg",
+      "/projects/05/IMG_6777%20copy.jpg",
+      "/projects/05/IMG_6779%20copy.jpg",
+      "/projects/05/IMG_6789%20copy.jpg",
+      "/projects/05/IMG_6799%20copy.jpg",
+      "/projects/05/IMG_6809%20copy.jpg",
+      "/projects/05/IMG_6810%20copy.jpg"
+    ],
+    description: "400-seater auditorium outfitted with Anutone Slat Surco Lite, Hush Panel, Nubby, and SynthPF to achieve balanced absorption across walls and ceilings with premium finishes.",
+    challenge: "Deliver clear speech intelligibility and controlled reverberation in a 400-seat hall while integrating multiple acoustic systems across wall panelling, grid ceilings, and gypsum ceilings.",
+    solution: "Applied Anutone Slat Surco Lite and Nubby with SynthPF infill on walls, combined Hush Panel treatments on acoustic grid ceilings, and coordinated gypsum ceiling elements for a seamless acoustic envelope.",
+    results: [
+      "Enhanced speech clarity and comfortable reverberation for presentations and performances",
+      "Consistent acoustic experience across all seating zones",
+      "Durable finishes suited for high-usage institutional venues"
+    ],
+    specifications: [
+      { label: "Capacity", value: "400 seats" },
+      { label: "Products Used", value: "Anutone Slat Surco Lite, Anutone Hush Panel, Anutone Nubby, SynthPF" },
+      { label: "Scope", value: "Acoustic wall panelling, acoustic grid ceiling, gypsum ceiling" }
+    ],
+    tags: ["Auditorium", "Acoustic", "Grid Ceiling", "Gypsum Ceiling", "Anutone"]
+  },
+  "6": {
+    title: "MALPANI GROUP OFFICE, CHAKAN PUNE",
+    category: "Acoustic Wall Panelling",
+    location: "Chakan, Pune",
+    area: "Conference & Training Rooms",
+    year: "2024",
+    client: "MALPANI GROUP",
+    duration: "Turnkey execution",
+    heroImage: "/projects/06/IMG-20240913-WA0006.jpg",
+    images: [
+      "/projects/06/IMG-20240913-WA0006.jpg",
+      "/projects/06/IMG-20240913-WA0007.jpg",
+      "/projects/06/IMG-20240913-WA0008.jpg",
+      "/projects/06/IMG-20240913-WA0009.jpg",
+      "/projects/06/IMG-20240913-WA0010.jpg",
+      "/projects/06/IMG-20240913-WA0011.jpg"
+    ],
+    description: "Acoustic wall panelling for conference and training rooms using the Anutone Stretch System to deliver clean aesthetics and focused sound control.",
+    challenge: "Control reflections and improve intelligibility in multi-purpose rooms while maintaining a sleek corporate finish.",
+    solution: "Installed Anutone Stretch System panels across key reflection points to dampen echo and deliver a premium, seamless surface.",
+    results: [
+      "Improved speech clarity for meetings and trainings",
+      "Minimalist stretch finish that blends with the corporate interior",
+      "Durable acoustic treatment designed for frequent use"
+    ],
+    specifications: [
+      { label: "Application", value: "Conference & training rooms" },
+      { label: "Products Used", value: "Anutone Stretch System" },
+      { label: "Scope", value: "Acoustic wall panelling" }
+    ],
+    tags: ["Acoustic", "Stretch System", "Conference Room", "Training Room", "Anutone"]
+  },
+  "7": {
+    title: "GPMT Institute Miraj",
+    category: "Acoustic Cloud Ceiling",
+    location: "Miraj, Maharashtra",
+    area: "Canteen area",
+    year: "2024",
+    client: "GPMT Institute",
+    duration: "Turnkey execution",
+    heroImage: "/projects/07/IMG-20240308-WA0109.jpg",
+    images: [
+      "/projects/07/IMG-20240308-WA0109.jpg",
+      "/projects/07/IMG-20240308-WA0110.jpg",
+      "/projects/07/IMG-20240308-WA0111.jpg",
+      "/projects/07/IMG-20240308-WA0112.jpg"
+    ],
+    description: "Custom 30mm PET acoustic clouds installed throughout the canteen area to tame noise and improve comfort for students and staff.",
+    challenge: "Reduce reverberation and chatter in an open canteen while keeping the ceiling visually light and easy to maintain.",
+    solution: "Designed and installed customized 30mm PET acoustic cloud panels over key seating zones to absorb reflections without obstructing services.",
+    results: [
+      "Noticeable drop in canteen echo and improved speech clarity",
+      "Lightweight cloud panels that preserve an open, airy ceiling",
+      "Durable PET finish suited for high-traffic dining areas"
+    ],
+    specifications: [
+      { label: "Application", value: "Canteen acoustic cloud ceiling" },
+      { label: "Products Used", value: "Customised 30mm acoustic cloud of PET panel" },
+      { label: "Scope", value: "Acoustic cloud installation" }
+    ],
+    tags: ["Acoustic", "Cloud Ceiling", "PET Panel", "Canteen"]
+  },
+  "8": {
+    title: "WORKDAY, PUNE",
+    category: "Acoustic Ceiling",
+    location: "Pune, Maharashtra",
+    area: "Office spaces",
+    year: "2024",
+    client: "Workday",
+    duration: "Turnkey execution",
+    heroImage: "/projects/08/WORK%20DAY%201.jpg",
+    images: [
+      "/projects/08/WORK%20DAY%201.jpg",
+      "/projects/08/WORKDAT.jpg"
+    ],
+    description: "Acoustic ceiling installation using 25mm Anutone Strand Melange Fila bevel edge panels to create a calm, intelligible workspace.",
+    challenge: "Reduce ceiling reflections and ambient noise in open office areas without compromising the modern aesthetic.",
+    solution: "Installed 25mm Anutone Strand Melange Fila bevel edge acoustic ceiling panels to absorb reflections and maintain a clean, refined look.",
+    results: [
+      "Improved speech clarity and reduced noise fatigue for staff",
+      "Seamless ceiling finish that matches the office design language",
+      "Durable acoustic system suitable for high-activity work areas"
+    ],
+    specifications: [
+      { label: "Application", value: "Office acoustic ceiling" },
+      { label: "Products Used", value: "25mm Anutone Strand Melange Fila bevel edge" },
+      { label: "Scope", value: "Acoustic ceiling installation" }
+    ],
+    tags: ["Acoustic", "Ceiling", "Anutone", "Office"]
+  },
+  "9": {
+    title: "Maths Dept Auditorium, Shivaji University Kolhapur",
+    category: "Auditorium Acoustics",
+    location: "Kolhapur, Maharashtra",
+    area: "80-seater auditorium",
+    year: "2024",
+    client: "Shivaji University",
+    duration: "Turnkey execution",
+    heroImage: "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.32%20AM%20(2).jpeg",
+    images: [
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.32%20AM%20(2).jpeg",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM%20(1).jpeg",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM%20(2).jpeg",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.33%20AM.jpeg",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.34%20AM%20(1).jpeg",
+      "/projects/09/WhatsApp%20Image%202025-11-25%20at%2010.50.34%20AM.jpeg"
+    ],
+    description: "80-seater Mathematics Department auditorium treated with Anutone Slat Surco Lite and 10mm PET panels to achieve balanced acoustics and a refined finish.",
+    challenge: "Deliver clear speech and controlled reverberation in a compact 80-seat hall while keeping a clean academic aesthetic.",
+    solution: "Installed Anutone Slat Surco Lite with 10mm PET panels across critical wall and ceiling zones to absorb reflections and maintain visual harmony.",
+    results: [
+      "Improved speech intelligibility for lectures and presentations",
+      "Controlled reverberation suited to a compact auditorium",
+      "Durable acoustic finishes aligned with university standards"
+    ],
+    specifications: [
+      { label: "Capacity", value: "80 seats" },
+      { label: "Products Used", value: "Anutone Slat Surco Lite, 10mm PET panel" },
+      { label: "Scope", value: "Acoustic wall and ceiling treatments" }
+    ],
+    tags: ["Auditorium", "Acoustic", "PET Panel", "Anutone"]
   }
 };
 
