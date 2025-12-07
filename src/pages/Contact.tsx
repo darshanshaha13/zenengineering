@@ -253,28 +253,6 @@ const Contact = () => {
                   </CardContent>
                 </Card>
 
-                {/* Optional: Embed Map Placeholder */}
-                <div className={`h-72 w-full rounded-xl mt-8 overflow-hidden border ${BORDER_DARK} shadow-2xl shadow-black/50`}>
-                  <iframe
-                    title="Sangli Headquarters Map"
-                    src="https://www.openstreetmap.org/export/embed.html?bbox=74.5618%2C16.8592%2C74.5818%2C16.8792&layer=mapnik&marker=16.8692%2C74.5718"
-                    className="w-full h-full"
-                    style={{ border: 0 }}
-                    loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"
-                  />
-                </div>
-                <div className="mt-3 text-sm text-slate-300">
-                  <a
-                    href="https://www.openstreetmap.org/?mlat=16.8692&mlon=74.5718#map=16/16.8692/74.5718"
-                    target="_blank"
-                    rel="noreferrer"
-                    className="text-blue-300 hover:text-blue-200"
-                  >
-                    View on map
-                  </a>
-                </div>
-
                 <p className="text-slate-300 mt-6">
                   We&apos;re here to engineer comfort, performance, and long-lasting reliability for your space.
                 </p>
