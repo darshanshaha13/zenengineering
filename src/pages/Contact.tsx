@@ -223,12 +223,12 @@ const Contact = () => {
                       <div>
                         <h4 className={`font-semibold mb-1 ${TEXT_LIGHT}`}>WhatsApp</h4>
                         <a 
-                          href="https://wa.me/917709022575" 
+                          href="https://wa.me/919610029008" 
                           target="_blank" 
                           rel="noopener noreferrer" 
                           className={`text-blue-300 hover:text-blue-500 transition-colors`}
                         >
-                          +91 77090 22575 (Chat Now)
+                          +91 96100 29008 (Chat Now)
                         </a>
                       </div>
                     </div>
