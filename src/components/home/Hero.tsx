@@ -113,44 +113,36 @@ const Hero = () => {
           </div>
 
           {/* Channel partners highlight */}
-          {/* Channel partners highlight */}
-          <br></br>
-<div className="max-w-4xl mt-4">
-  <div className="flex flex-wrap items-center gap-3">
+                    <br></br>
+          <div className="max-w-4xl mt-6">
+            <div className="flex flex-col gap-3 md:flex-row md:items-center md:gap-4">
+              <div className="flex items-center gap-3">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 text-white shadow-[0_12px_35px_rgba(59,130,246,0.35)]">
+                  <Sparkles className="h-5 w-5" />
+                </div>
 
-    {/* Icon */}
-    <div className="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-400 text-white shadow-[0_12px_35px_rgba(59,130,246,0.35)]">
-      <Sparkles className="h-5 w-5" />
-    </div>
+                <div className="text-[11px] uppercase tracking-[0.2em] text-slate-200/80 mr-2">
+                  Our Channel Partners:
+                </div>
+              </div>
 
-    {/* Title */}
-    <div className="text-[11px] uppercase tracking-[0.2em] text-slate-200/80 mr-2">
-      Our Channel Partners:
-    </div>
-
-    {/* Logos — inline */}
-    <div className="flex flex-nowrap items-center gap-3 md:gap-4">
-      {channelPartners.map((partner) => (
-        <div
-          key={partner.name}
-          className="group relative flex h-12 w-[130px] items-center justify-center rounded-lg bg-gradient-to-br from-white/10 via-white/5 to-transparent px-3 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-0.5 hover:ring-blue-400/50"
-        >
-          <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/15 via-cyan-400/10 to-blue-500/15 opacity-0 blur-sm transition duration-300 group-hover:opacity-100" />
-          <img
-            src={partner.logoSrc}
-            alt={`${partner.name} logo`}
-            className="relative z-10 max-h-10 w-auto object-contain"
-          />
-        </div>
-      ))}
-    </div>
-  </div>
-</div>
-      <div>
-        <br></br>
-        
-      </div>
-
+              <div className="flex w-full flex-col gap-3 md:w-auto md:flex-row md:flex-nowrap md:items-center md:gap-4">
+                {channelPartners.map((partner) => (
+                  <div
+                    key={partner.name}
+                    className="group relative flex h-12 w-full max-w-[240px] items-center justify-center rounded-lg bg-gradient-to-br from-white/10 via-white/5 to-transparent px-3 py-2 shadow-[0_8px_25px_rgba(0,0,0,0.35)] ring-1 ring-white/10 transition duration-300 hover:-translate-y-0.5 hover:ring-blue-400/50 md:w-[130px]"
+                  >
+                    <div className="pointer-events-none absolute inset-0 rounded-lg bg-gradient-to-r from-blue-500/15 via-cyan-400/10 to-blue-500/15 opacity-0 blur-sm transition duration-300 group-hover:opacity-100" />
+                    <img
+                      src={partner.logoSrc}
+                      alt={`${partner.name} logo`}
+                      className="relative z-10 max-h-10 w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
