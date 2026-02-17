@@ -101,9 +101,9 @@ const managingPartners = [
     linkedin: "#",
   },
   {
-    name: "Akshay Gajre",
+    name: "Akshay Gajare",
     designation: "Managing Partner - Services",
-    image: "/darshan-shah.webp",
+    image: "/akshay-gajare-photo.webp",
     bio: "Heads services and support to maintain system reliability and responsive customer care.",
     linkedin: "#",
   },
