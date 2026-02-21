@@ -89,7 +89,7 @@ const managingPartners = [
   {
     name: "Darshan Shah",
     designation: "Managing Partner - Sales & Marketing",
-    image: "/logos/darshan-shah.webp",
+    image: "/darshan-photo.webp",
     bio: "Leads sales and marketing with a focus on client relationships and growth across Maharashtra.",
     linkedin: "https://www.linkedin.com/in/darshan-shah",
   },

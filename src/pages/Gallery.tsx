@@ -44,6 +44,18 @@ const GALLERY_IMAGES = [
   { id: "26", url: "/gallery/26.webp", title: "Project 26" },
   { id: "27", url: "/gallery/27.webp", title: "Project 27" },
   { id: "28", url: "/gallery/28.webp", title: "Project 28" },
+  { id: "29", url: "/gallery/29.webp", title: "Project 29" },
+  { id: "30", url: "/gallery/30.webp", title: "Project 30" },
+  { id: "31", url: "/gallery/31.webp", title: "Project 31" },
+  { id: "32", url: "/gallery/32.webp", title: "Project 32" },
+  { id: "33", url: "/gallery/33.webp", title: "Project 33" },
+  { id: "34", url: "/gallery/34.webp", title: "Project 34" },
+  { id: "35", url: "/gallery/35.webp", title: "Project 35" },
+  { id: "36", url: "/gallery/36.webp", title: "Project 36" },
+  { id: "37", url: "/gallery/37.webp", title: "Project 37" },
+  { id: "38", url: "/gallery/38.webp", title: "Project 38" },
+  { id: "39", url: "/gallery/39.webp", title: "Project 39" },
+  { id: "40", url: "/gallery/40.webp", title: "Project 40" },
 ];
 
 // helper to vary tile sizes – gives that “magazine” / masonry feel
