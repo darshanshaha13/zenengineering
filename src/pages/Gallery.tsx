@@ -92,21 +92,6 @@ const GALLERY_IMAGES = [
   { id: "74", url: "/gallery/74.webp", title: "Project 74" },
   { id: "75", url: "/gallery/75.webp", title: "Project 75" },
   { id: "76", url: "/gallery/76.webp", title: "Project 76" },
-  { id: "77", url: "/gallery/77.webp", title: "Project 77" },
-  { id: "78", url: "/gallery/78.webp", title: "Project 78" },
-  { id: "79", url: "/gallery/79.webp", title: "Project 79" },
-  { id: "80", url: "/gallery/80.webp", title: "Project 80" },
-  { id: "81", url: "/gallery/81.webp", title: "Project 81" },
-  { id: "82", url: "/gallery/82.webp", title: "Project 82" },
-  { id: "83", url: "/gallery/83.webp", title: "Project 83" },
-  { id: "84", url: "/gallery/84.webp", title: "Project 84" },
-  { id: "85", url: "/gallery/85.webp", title: "Project 85" },
-  { id: "86", url: "/gallery/86.webp", title: "Project 86" },
-  { id: "87", url: "/gallery/87.webp", title: "Project 87" },
-  { id: "88", url: "/gallery/88.webp", title: "Project 88" },
-  { id: "89", url: "/gallery/89.webp", title: "Project 89" },
-  { id: "90", url: "/gallery/90.webp", title: "Project 90" },
-  { id: "91", url: "/gallery/91.webp", title: "Project 91" },
 ];
 
 // helper to vary tile sizes – gives that “magazine” / masonry feel
